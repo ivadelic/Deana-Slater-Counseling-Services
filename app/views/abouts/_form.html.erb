@@ -1,0 +1,42 @@
+<%= form_for @about do |f| %>
+  <%# @about.errors.full_messages.first if @about.errors.any? %>
+  <div class="abouts-form"%>
+    <div class="field">
+      <%= f.label :main_title %>
+      <%= f.text_field :main_title %>
+    </div>
+    <div class="field">
+      <%= f.label :main_paragraph %>
+      <%= f.text_area :main_paragraph %>
+    </div>
+    <div class="field">
+      <%= f.label :approach_title %>
+      <%= f.text_field :approach_title %>
+    </div>
+    <div class= "field">
+      <%= f.label :approach_paragraph %>
+      <%= f.text_area :approach_paragraph %>
+    </div>
+    <div class="field">
+      <%= f.label :education_title %>
+      <%= f.text_field :education_title%>
+    </div>
+    <div class="field">
+      <%= f.label :education_paragraph %>
+      <%= f.text_area :education_paragraph %>
+    </div>
+    <div class="field">
+      <%= f.label :professional_membership_title %>
+      <%= f.text_field :professional_membership_title %>
+    </div>
+    <div class="field">
+      <%= f.label :professional_membership_paragraph %>
+      <li><%= f.text_area :professional_membership_point1 %></li>
+      <li><%= f.text_area :professional_membership_point2 %></li>
+      <li><%= f.text_area :professional_membership_point3 %></li>
+    </div>
+    <div class="submit-button">
+      <%= f.submit %>
+    </div>
+  </div>
+<% end %>

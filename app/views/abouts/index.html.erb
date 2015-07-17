@@ -1,0 +1,62 @@
+<!-- <h1>About Me</h1>
+<p>I have been providing support to a wide range of individuals with a variety of concerns for over 8 years. While working in the mental health field, I became particularly interested with experiences related to grief, bereavement, trauma and other forms of loss. I currently work closely with and support individuals and their families who have been impacted by cancer. I provide client centered counselling and psychotherapy for adults and young adults based on individual requests and needs.</p>
+
+<ul>
+  <h4>Approach</h4>
+
+    <li>I practice with an integrative approach, drawing from cognitive behavioural, narrative, and trauma-informed therapies. I ensure that the techniques I am drawing upon best fit the needs and goals that the client brings to the
+    therapeutic relationship.  What is of utmost importance is to provide a safe environment for the client to share and explore the struggles the he or she has or is encountering.</li>
+
+  <h4>Education</h4>
+
+  <li>I graduated with a Bachelors of Social Work from Ryerson University in 2009 and obtained my Masters of Education in Counselling Psychology from the University of Toronto – Ontario Institute for Studies in Education in 2013.While obtaining my Master’s I had a desire to specialize in grief and bereavement. I hold two certificates: Bereavement Education, and Grief and Trauma Counselling, both from the University of Toronto’s Factor-Inwentash School of Social Work.</li>
+
+  <h4>Professional Membership</h4>
+
+  <li>Good-standing registered member of the College of Social Workers, since 2014.</li>
+  <li>Professional member of the Ontario Association of Social Workers</li>
+  <li>Guest member of the Canadian Counselling and Psychotherapy Association</li>
+</ul> -->
+
+<% @abouts.each do |about| %>
+  <div class="about-container">
+    <div id= "about-main-title">
+      <h1><%= about.main_title %></h1>
+    </div>
+    <div id="about-main-paragraph">
+      <p><%= about.main_paragraph %></p>
+    </div>
+    <div id="about-approach-title">
+      <h4><%= about.education_title %></h4>
+    </div>
+    <div id="about-approach-paragraph">
+      <p><%= about.approach_paragraph %></p>
+    </div>
+    <div id="about-education-title">
+      <h4><%= about.education_title %></h4>
+    </div>
+    <div id="about-education-paragraph">
+      <p><%= about.education_paragraph %></p>
+    </div>
+    <div id="about-professional-membership-title">
+      <h4><%= about.professional_membership_title %></h4>
+    </div>
+    <div id="about-professional-membership-paragraph">
+      <ul>
+        <li><%= about.professional_membership_point1 %></li>
+        <li><%= about.professional_membership_point2 %></li>
+        <li><%= about.professional_membership_point3 %></li>
+      </ul>
+    </div>
+  </div>
+
+  <% if current_admin %>
+    <div id="about_buttons">
+      <%= link_to "New", new_about_path(about)%>
+      <%= link_to "Edit", edit_about_path(about) %>
+      <%= link_to "Delete", about_path(about), method: :delete, data: {confirm: "Are you sure you want to delete this bio?"} %>
+    </div>
+  <% end %>
+
+<% end %>
+
