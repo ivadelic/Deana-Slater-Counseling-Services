@@ -5,6 +5,7 @@ class AboutsController < ApplicationController
 
   def new
     @about = About.new
+    @about.propoint = Propoint.new
   end
 
   def create
@@ -50,14 +51,13 @@ class AboutsController < ApplicationController
       :approach_paragraph,
       :education_title,
       :education_paragraph,
-      :professional_points_attributes: [
+      propoints_attributes: [
         :id,
-        :text,
+        :points,
         :_destroy
-      ]
+      ])
+  end
+end
       # :professional_membership_point1,
       # :professional_membership_point2,
       # :professional_membership_point3,
-      )
-  end
-end

@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem "better_errors"
 gem "favorite_things"
 gem "cocoon"
+gem 'simple_form'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

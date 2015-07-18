@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717181013) do
+ActiveRecord::Schema.define(version: 20150717184801) do
 
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at",                     null: false
@@ -42,5 +42,14 @@ ActiveRecord::Schema.define(version: 20150717181013) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
+
+  create_table "propoints", force: :cascade do |t|
+    t.text     "points"
+    t.integer  "about_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "propoints", ["about_id"], name: "index_propoints_on_about_id"
 
 end
