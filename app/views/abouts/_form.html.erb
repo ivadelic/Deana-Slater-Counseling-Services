@@ -32,8 +32,8 @@
 
     <h3>Profesional Memberships</h3>
       <div class="field">
-      <%= f.fields_for :propoints do |propoint| %><br/>
-        <%= render "propoint_fields" %>
+      <%= f.fields_for :propoints do |propoints_form| %><br/>
+        <%= render "propoint_fields", f: propoints_form %>
       </div>
       <% end %>
       <div class="about-links">

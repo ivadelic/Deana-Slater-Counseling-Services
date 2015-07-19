@@ -1,0 +1,11 @@
+<div class='nested-fields'>
+  <div class="field">
+    <%= f.label :article_name, "Article's Name" %>
+    <%= f.text_field :article_name %>
+  </div>
+  <div class="field">
+    <%= f.label :article_link, "Link to Article" %>
+    <%= f.text_field :article_link %>
+  </div>
+  <%= link_to_remove_association "Remove Article", f %>
+</div>

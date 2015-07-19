@@ -1,4 +1,4 @@
-<h1>Resources and Links</h1>
+<!-- <h1>Resources and Links</h1>
 <p>If you are in crisis and require emergency assistance please go to the nearest emergency department or call 911</p>
 
 <h2>Telephone:</h2>
@@ -17,10 +17,68 @@
     <p>http://www.camh.ca/en/hospital/Pages/home.aspx</p>
     <li>Distress Centre</li>
     <p>https://www.torontodistresscentre.com/</p>
-  </ul>
-<h2>Articles:</h2>
+  </ul> -->
+<!-- <h2>Articles:</h2>
 
-<p>(Coming soon)</p>
-<%# if current_admin %>
-  <button><%# link_to "Edit", edit_about_path(@abouts) %></button>
-<%# end %>
+<p>(Coming soon)</p> -->
+
+<% @resources.each do |resource| %>
+<!-- Main -->
+  <div class="resource-container">
+
+    <div id= "resource-main-title">
+      <h1><%= resource.main_title %></h1>
+    </div>
+    <div id="resource-main-paragraph">
+      <p><%= resource.main_paragraph %></p>
+    </div>
+
+<!-- Phone -->
+    <div id="resource-telephone-title">
+      <h4><%= resource.telephone_title %></h4>
+    </div>
+
+    <div id="resource_telephone_points">
+      <ul>
+        <% resource.telpoints.each do |telpoint| %>
+          <li><%= telpoint.telephone_company %></li>
+          <a href= "tel:<%= telpoint.telephone_number %>"><%= telpoint.telephone_number %></a>
+        <% end %>
+      </ul>
+    </div>
+
+<!-- Website -->
+    <div id="resource-website-title">
+      <h4><%= resource.website_title %></h4>
+    </div>
+
+    <div id="resource_website_points">
+      <ul>
+        <% resource.webpoints.each do |webpoint| %>
+          <li><%= webpoint.website_company %><br/></li>
+           <a href= "<%= webpoint.website_link %>" target="_blank"><%= webpoint.website_link %></a>
+        <% end %>
+      </ul>
+    </div>
+
+<!-- Article -->
+    <div id="resource-article-title">
+      <h4><%= resource.article_title %></h4>
+    </div>
+
+    <div id="resource_website_points">
+      <ul>
+        <% resource.articlepoints.each do |articlepoint| %>
+          <li><%= articlepoint.article_name %></li>
+           <a href= "<%= articlepoint.article_link %>" target="_blank"><%= articlepoint.article_link %></a>
+        <% end %>
+      </ul>
+    </div>
+
+  </div>
+      <%= link_to "New", new_resource_path(resource)%>
+      <%= link_to "Edit", edit_resource_path(resource) %>
+      <%= link_to "Delete", resource_path(resource), method: :delete, data: {confirm: "Are you sure you want to delete this bio?"} %>
+<% end %>
+  <%# if current_admin %>
+  <%# end %>

@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   resources :admins
   resources :sessions
   resources :abouts
+  resources :resources
   resources :homes, only: [:edit, :index, :show]
-  resources :resources, only: [:edit, :index, :show]
   resources :faqs, only: [:edit, :index, :delete]
 
   # The priority is based upon order of creation: first created -> highest priority.

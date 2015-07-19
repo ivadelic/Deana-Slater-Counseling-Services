@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717184801) do
+ActiveRecord::Schema.define(version: 20150719032047) do
 
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at",                     null: false
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 20150717184801) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "articlepoints", force: :cascade do |t|
+    t.string   "article_name"
+    t.string   "article_link"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "resource_id"
+  end
+
   create_table "homes", force: :cascade do |t|
     t.string   "business_name"
     t.string   "background_photo"
@@ -44,12 +52,38 @@ ActiveRecord::Schema.define(version: 20150717184801) do
   end
 
   create_table "propoints", force: :cascade do |t|
-    t.text     "points"
+    t.text     "point"
     t.integer  "about_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_index "propoints", ["about_id"], name: "index_propoints_on_about_id"
+
+  create_table "resources", force: :cascade do |t|
+    t.string   "main_title"
+    t.text     "main_paragraph"
+    t.string   "telephone_title"
+    t.string   "website_title"
+    t.string   "article_title"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "telpoints", force: :cascade do |t|
+    t.string   "telephone_company"
+    t.string   "telephone_number"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "resource_id"
+  end
+
+  create_table "webpoints", force: :cascade do |t|
+    t.string   "website_company"
+    t.string   "website_link"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "resource_id"
+  end
 
 end

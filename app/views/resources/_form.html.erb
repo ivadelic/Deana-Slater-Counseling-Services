@@ -1,0 +1,64 @@
+<%= form_for @resource do |f| %>
+  <%# @about.errors.full_messages.first if @about.errors.any? %>
+  <div class="abouts-form">
+    <div class="field">
+      <%= f.label :main_title %><br/>
+      <%= f.text_field :main_title %>
+    </div>
+    <div class="field">
+      <%= f.label :main_paragraph %><br/>
+      <%= f.text_area :main_paragraph %>
+    </div>
+    <div class="field">
+      <%= f.label :telephone_title %><br/>
+      <%= f.text_field :telephone_title %>
+    </div>
+
+<!-- Telephone Nested Attribute -->
+  <div id="nested-fields">
+    <%= f.fields_for :telpoints do |telpoints_form| %>
+      <%= render "telpoint_fields", f: telpoints_form %>
+    <% end %>
+  </div>
+  <div class="links">
+    <%= link_to_add_association "Add a phone resource", f, :telpoints %>
+  </div>
+<!--  -->
+
+    <div class="field">
+      <%= f.label :website_title %><br/>
+      <%= f.text_field :website_title %>
+    </div>
+
+<!-- Website Nested Attribute -->
+  <div id="nested-fields">
+    <%= f.fields_for :webpoints do |webpoints_form| %>
+      <%= render "webpoint_fields", f: webpoints_form %>
+    <% end %>
+  </div>
+  <div class="links">
+    <%= link_to_add_association "Add a website resource", f, :webpoints %>
+  </div>
+<!--  -->
+
+    <div class="field">
+      <%= f.label :article_title %><br/>
+      <%= f.text_field :article_title %>
+    </div>
+
+<!--     Article Nested Attribute -->
+  <div id="nested-fields">
+    <%= f.fields_for :articlepoints do |articlepoints_form| %>
+      <%= render "articlepoint_fields", f: articlepoints_form %>
+    <% end %>
+  </div>
+  <div class="links">
+    <%= link_to_add_association "Add an Article.", f, :articlepoints %>
+  </div>
+<!--  -->
+
+    <div class="submit-button">
+      <%= f.submit %>
+    </div>
+  </div>
+<% end %>
