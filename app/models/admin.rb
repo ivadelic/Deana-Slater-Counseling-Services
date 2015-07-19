@@ -2,6 +2,8 @@ class Admin < ActiveRecord::Base
 
   has_one :home
   has_one :about
+  has_one :resource
+  has_one :faq
 
   def user_params
     params.require(:admin).permit(:email, :password, :password_confirmation)

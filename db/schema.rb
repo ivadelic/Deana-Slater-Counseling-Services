@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150719032047) do
+ActiveRecord::Schema.define(version: 20150719043256) do
 
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at",                     null: false
@@ -44,6 +44,12 @@ ActiveRecord::Schema.define(version: 20150719032047) do
     t.integer  "resource_id"
   end
 
+  create_table "faqs", force: :cascade do |t|
+    t.string   "main_title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "homes", force: :cascade do |t|
     t.string   "business_name"
     t.string   "background_photo"
@@ -59,6 +65,16 @@ ActiveRecord::Schema.define(version: 20150719032047) do
   end
 
   add_index "propoints", ["about_id"], name: "index_propoints_on_about_id"
+
+  create_table "questions", force: :cascade do |t|
+    t.text     "question"
+    t.text     "answer"
+    t.integer  "faq_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "questions", ["faq_id"], name: "index_questions_on_faq_id"
 
   create_table "resources", force: :cascade do |t|
     t.string   "main_title"

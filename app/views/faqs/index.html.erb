@@ -1,1 +1,42 @@
-<h1>Frequently Asked Questions</h1>
+<!-- <h3>Are you covered by OHIP (Ontario Health Insurance Plan)?</h3>
+
+<p>Unfortunately, the government covers only psychiatrists and counselling provided by hospital staff members.</p>
+
+<h3>What is the difference between psychiatrist, psychologist, psychotherapy?</h3>
+
+<p>Please follow this *LINK* to the terminology page.</p>
+
+<h3>I have a private insurance plan, will that cover me?</h3>
+
+<p>All private insurance companies and plans differ from one to the next. Certain plans only provide coverage for ‘psychologists’; others may cover ‘psychotherapy’.
+
+As a Registered Social Worker, I am able to provide psychotherapy. This means that you would be able to claim the cost of my services through your private insurance plan. Please note, you must obtain a referral from your family doctor prior to claiming your psychotherapy expense through your insurance provider.</p>
+
+<h3>How many sessions will I need?</h3>
+
+<p>There is no right answer to this question. The number of sessions you feel you need is dependent upon the issues and concerns you bring to our sessions. Ongoing counselling and psychotherapy is very beneficial to a person’s well being, even after working through their primary issue.
+
+It is important to mention that sometimes therapist and client are not the best fit. I believe that you will get a sense of my personality and style, and determine if this is a good match for you. Some people will discover quickly if the therapist will be someone they can or cannot open up to. If you do not feel like I am a good fit for you, I am able to make referrals to other professionals.</p> -->
+
+<% @faqs.each do |faq| %>
+<!-- Main -->
+<div class="faq-container">
+
+  <div id= "faq-main-title">
+    <h1><%= faq.main_title %></h1>
+  </div>
+
+  <div id="faq_nested_routes">
+      <% faq.questions.each do |f| %>
+        <h3><%= f.question %></h3>
+        <p><%= f.answer %></p>
+      <% end %>
+  </div>
+</div>
+
+  <div class= "faq-buttons">
+    <%= link_to "Edit", edit_faq_path(faq) %>
+    <%= link_to "Delete", faq_path(faq), method: :delete, data: {confirm: "Are you sure you want to delete this entire FAQs?"} %>
+  </div>
+<% end %>
+    <%= link_to "New", new_faq_path(@faq)%>

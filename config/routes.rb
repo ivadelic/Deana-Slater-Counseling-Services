@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   root :to => "homes#index"
 
   get "log_out" => "sessions#destroy", :as => "log_out"
@@ -10,8 +9,9 @@ Rails.application.routes.draw do
   resources :sessions
   resources :abouts
   resources :resources
+  resources :faqs
+  resources :contacts
   resources :homes, only: [:edit, :index, :show]
-  resources :faqs, only: [:edit, :index, :delete]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
