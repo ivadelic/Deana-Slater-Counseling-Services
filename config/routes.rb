@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get "log_in" => "sessions#new", :as => "log_in"
   get "sign_up" => "admins#new", :as => "sign_up"
   # root :to => "admins#new"
-  resources :admins
-  resources :sessions
+  resources :admins, only: [:new, :create]
+  resources :sessions, only: [:new, :create, :destroy]
   resources :abouts
   resources :resources
   resources :faqs

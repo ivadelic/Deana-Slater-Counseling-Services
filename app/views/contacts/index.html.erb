@@ -26,12 +26,14 @@
     </div>
   </div>
 
-  <%# if current_admin %>
+  <% if current_admin %>
     <div id="about_buttons">
       <%= link_to "Edit", edit_contact_path(contact) %>
       <%= link_to "Delete", contact_path(contact), method: :delete, data: {confirm: "Are you sure you want to delete this entire section?"} %>
     </div>
-  <%# end %>
+  <% end %>
 <% end %>
 
-<%= link_to "New", new_contact_path(@contact)%>
+<% if current_admin %>
+  <%= link_to "New", new_contact_path(@contact)%>
+<% end %>

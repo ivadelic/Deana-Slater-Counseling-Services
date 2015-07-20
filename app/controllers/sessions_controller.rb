@@ -3,8 +3,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    admin = Admin.authenticate(params[:email], params[:password])
-    if admin
+    admin = Admin.find_by(email: params[:email])
+    if admin && admin.authenticate(params[:password])
       session[:admin_id] = admin.id
       redirect_to root_url, :notice => "Logged in!"
     else
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
+    session[:admin_id] = nil
     redirect_to root_url, :notice => "Logged out!"
   end
 end
