@@ -1,7 +1,9 @@
-<div class='nested-fields'>
-  <div class="field">
-    <%= f.label :point, "Professional Membership" %>
-    <%= f.text_field :point %>
+<main>
+  <div class='nested-fields'>
+    <div class="field">
+      <%= f.label :point, "Professional Membership" %>
+      <%= f.text_field :point %>
+    </div>
+    <%= link_to_remove_association "Remove Membership", f %>
   </div>
-  <%= link_to_remove_association "Remove Membership", f %>
-</div>
+</main>

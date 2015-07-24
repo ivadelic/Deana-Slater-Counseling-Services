@@ -1,39 +1,133 @@
-<h1>Contact and Location Info</h1>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.3286109908804!2d-79.3787072!3d43.6621351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb4b6bc500a3%3A0x5615240011aae970!2s80+Carlton+St+%2310%2C+Toronto%2C+ON+M5B+1L6!5e0!3m2!1sen!2sca!4v1437319018197" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-</br>
+<body>
+  <main>
+    <h1 class="heading_with_background">Contact and Location Info</h1>
+
+    <div class="side-image">
+      <div class="images-wrapper">
+        <div id="map_canvas">
+      <!--     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.3286109908804!2d-79.3787072!3d43.6621351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb4b6bc500a3%3A0x5615240011aae970!2s80+Carlton+St+%2310%2C+Toronto%2C+ON+M5B+1L6!5e0!3m2!1sen!2sca!4v1437775417828" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+        </div>
+      </div>
+
+      <div class="side-image-content">
+        <% @contacts.each do |contact| %>
+          <div class="contact-container">
+            <div id= "contact-main-title">
+              <h1><%# contact.main_title %></h1>
+            </div>
+            <div id="contact_name_and_credentials">
+              <h2><%= contact.name %> , <%= contact.credits %></h2>
+            </div>
+            <div id="contact_description">
+              <p><%= contact.description %></p>
+            </div>
+            <div id="contact_email">
+              <h4>Email:</h4>
+              <p><%= contact.email %></p>
+              <p><a href="mailto:<%= contact.email %>" target="_top">Send Deana an email</a></p>
+            </div><br/>
+            <div id="contact_phonenumber">
+              <h4>Phone:</h4>
+              <p><a href= "tel:<%= contact.phone_number %>"><%= contact.phone_number %></a></p>
+            </div>
+            <div id="contact_address">
+              <h4>Address:</h4>
+              <p><%= contact.address %></p>
+            </div>
+          </div>
+
+          <% if current_admin %>
+            <div id="about_buttons">
+              <%= link_to "Edit", edit_contact_path(contact) %>
+              <%= link_to "Delete", contact_path(contact), method: :delete, data: {confirm: "Are you sure you want to delete this entire section?"} %>
+            </div>
+          <% end %>
+        <% end %>
+
+        <% if current_admin %>
+          <%= link_to "New", new_contact_path(@contact)%>
+        <% end %>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://developers.google.com/maps/documentation/javascript/reference#MapTypeStyleFeatureType"></script>
+
+</body>
 
 
-<% @contacts.each do |contact| %>
-  <div class="contact-container">
-    <div id= "contact-main-title">
-      <h1><%# contact.main_title %></h1>
-    </div>
-    <div id="contact_name_and_credentials">
-      <h2><%= contact.name %> , <%= contact.credits %></h2>
-    </div>
-    <div id="contact_description">
-      <p><%= contact.description %></p>
-    </div>
-    <div id="contact_email">
-      <h4><%= contact.email %></h4>
-      <a href="mailto:<%= contact.email %>" target="_top">Send an email</a>
-    </div><br/>
-    <div id="contact_phonenumber">
-      <a href= "tel:<%= contact.phone_number %>"><%= contact.phone_number %></a>
-    </div>
-    <div id="contact_address">
-      <p><%= contact.address %></p>
-    </div>
-  </div>
+<!--
+Add the code below to the bottom of your page, just before the closing </body> tag.
+Edit myLatlng and the other variables.
 
-  <% if current_admin %>
-    <div id="about_buttons">
-      <%= link_to "Edit", edit_contact_path(contact) %>
-      <%= link_to "Delete", contact_path(contact), method: :delete, data: {confirm: "Are you sure you want to delete this entire section?"} %>
-    </div>
-  <% end %>
-<% end %>
+Find syntax for Features that can be styled here:
 
-<% if current_admin %>
-  <%= link_to "New", new_contact_path(@contact)%>
-<% end %>
+https://developers.google.com/maps/documentation/javascript/reference#MapTypeStyleFeatureType
+
+Or use a service such as:
+
+http://software.stadtwerk.org/google_maps_colorizr/#
+http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
+https://developers.google.com/maps/documentation/javascript/tutorial
+-->
+
+<!--
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+  var bittersMap = (function () {
+    var myLatlng = new google.maps.LatLng(59.342457, 18.057340),
+        mapCenter = new google.maps.LatLng(59.340458, 18.057340),
+        mapCanvas = document.getElementById('map_canvas'),
+        mapOptions = {
+          center: mapCenter,
+          zoom: 13,
+          scrollwheel: false,
+          draggable: true,
+          disableDefaultUI: true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        },
+        map = new google.maps.Map(mapCanvas, mapOptions),
+        contentString =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">thoughtbot</h1>'+
+          '<div id="bodyContent"'+
+          '<p>Sveavägen 98</p>'+
+          '</div>'+
+          '</div>',
+        infowindow = new google.maps.InfoWindow({
+          content: contentString,
+          maxWidth: 300
+        }),
+        marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: 'thoughtbot (Sweden)'
+        });
+
+    return {
+      init: function () {
+        map.set('styles', [{
+          featureType: 'landscape',
+          elementType: 'geometry',
+          stylers: [
+            { hue: '#ffff00' },
+            { saturation: 30 },
+            { lightness: 10}
+          ]}
+        ]);
+
+        google.maps.event.addListener(marker, 'click', function () {
+          infowindow.open(map,marker);
+        });
+      }
+    };
+  }());
+
+  bittersMap.init();
+</script>
+-->
+
+<div id="map_canvas"></div>
+

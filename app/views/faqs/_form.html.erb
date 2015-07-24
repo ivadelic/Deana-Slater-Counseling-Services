@@ -1,9 +1,10 @@
-<%= form_for @faq do |f| %>
-  <div class="abouts-form">
-    <div class="field">
-      <%= f.label :main_title %><br/>
-      <%= f.text_field :main_title %>
-    </div>
+<main>
+  <%= form_for @faq do |f| %>
+    <div class="abouts-form">
+      <div class="field">
+        <%= f.label :main_title %><br/>
+        <%= f.text_field :main_title %>
+      </div>
 
       <div class="field">
       <%= f.fields_for :questions do |questions_form| %><br/>
@@ -17,4 +18,5 @@
         <%= f.submit %>
       </div>
     </div>
-<% end %>
+  <% end %>
+</main>

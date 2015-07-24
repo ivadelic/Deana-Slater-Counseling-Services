@@ -1,11 +1,13 @@
-<div class='nested-fields'>
-  <div class="field">
-    <%= f.label :question, "Question" %>
-    <%= f.text_area :question %>
+<main>
+  <div class='nested-fields'>
+    <div class="field">
+      <%= f.label :question, "Question" %>
+      <%= f.text_area :question %>
+    </div>
+    <div class="field">
+      <%= f.label :answer, "Answer" %>
+      <%= f.text_area :answer %>
+    </div>
+    <%= link_to_remove_association "Remove Question and Answer", f %>
   </div>
-  <div class="field">
-    <%= f.label :answer, "Answer" %>
-    <%= f.text_area :answer %>
-  </div>
-  <%= link_to_remove_association "Remove Question and Answer", f %>
-</div>
+</main>

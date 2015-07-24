@@ -1,33 +1,10 @@
-<!-- <h1>Resources and Links</h1>
-<p>If you are in crisis and require emergency assistance please go to the nearest emergency department or call 911</p>
-
-<h2>Telephone:</h2>
-  <ul>
-    <li>Anishnawbe Mental Health Crisis Management Services (Aboriginal clients) – 416-891-8606</li>
-    <li>Assaulted Women’s Helpline – 416-863-0511 or 1-866-863-0511</li>
-    <li>Kids Help Phone – 1-800-668-6868</li>
-    <li>Toronto Distress Centre – 416-480-4357</li>
-    <li>Toronto Rape Crisis Centre – 416-597-8808</li>
-  </ul>
-<h2>Websites:</h2>
-  <ul>
-    <li>Canadian Mental Health Association</li>
-    <p>http://toronto.cmha.ca/</p>
-    <li>Centre for Addiction and Mental Health</li>
-    <p>http://www.camh.ca/en/hospital/Pages/home.aspx</p>
-    <li>Distress Centre</li>
-    <p>https://www.torontodistresscentre.com/</p>
-  </ul> -->
-<!-- <h2>Articles:</h2>
-
-<p>(Coming soon)</p> -->
-
+<main>
 <% @resources.each do |resource| %>
 <!-- Main -->
   <div class="resource-container">
 
-    <div id= "resource-main-title">
-      <h1><%= resource.main_title %></h1>
+    <div id= "resource-main-title" >
+      <h1 class="heading_with_background"><%= resource.main_title %></h1>
     </div>
     <div id="resource-main-paragraph">
       <p><%= resource.main_paragraph %></p>
@@ -87,3 +64,4 @@
   <% if current_admin %>
       <%= link_to "New", new_resource_path(@resource)%>
   <% end %>
+</main>

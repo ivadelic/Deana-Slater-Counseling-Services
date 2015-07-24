@@ -1,3 +1,77 @@
 // Place all the styles related to the contacts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.side-image {
+  $base-line-height: 1.5em !default;
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
+  $side-image-background-top:   #FFFFFF;
+  $side-image-background-bottom: #FFFFFF;
+  $side-image-content-background: #FFFFFF;
+  $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
+
+  // background: $side-image-content-background;
+
+  @include media($large-screen) {
+    @include row(table);
+  }
+
+  .images-wrapper {
+    background: url(map.html) no-repeat scroll;
+    background-color: $side-image-background-top;
+    background-size: cover;
+    border-bottom: $side-image-border;
+    display: block;
+    min-height: 12em;
+    padding: 3em;
+
+      #map-canvas {
+          height: 400px;
+          width: 100%;
+        }
+
+        #map_canvas img {
+          max-width: none;
+        // to prevent UI control bug
+        }
+
+        #map_canvas .content {
+          padding: 0 0.5em 1em 0.5em;
+        }
+
+        #map_canvas .firstHeading {
+          font-size: 1em;
+          line-height: 1em;
+          font-weight: bold;
+          margin: 0;
+        }
+
+        #map_canvas #bodyContent p {
+          font-size: 1em;
+          margin: 0;
+        }
+      }
+
+    @include media($large-screen) {
+      @include span-columns(4);
+      background-position: bottom;
+      background-size: cover;
+      border-right: $side-image-border;
+    }
+
+  .side-image-content {
+    @include span-columns(12);
+    padding: 1em 1em 4em 1em;
+
+    @include media($large-screen) {
+      @include span-columns(8);
+      padding: 4em 4em 8em 4em;
+    }
+
+  }
+
+  @include reset-display();
+}

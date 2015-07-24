@@ -1,3 +1,38 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+  body.bg-img-div {
+    background: url(bg-img.jpg) no-repeat center center;
+    background-position: center center;
+
+    height: 1100px;
+    background-size: cover;
+    position: relative;
+    // @include linear-gradient(transparentize();
+  }
+
+
+  .overlay {
+    font-size: 3.3em;
+
+    background: #BBB;
+    color: white;
+    display: inline-block;
+    font-weight: 800;
+    margin-bottom: 1.3em;
+    padding: $base-padding;
+
+
+
+    top: 50%;
+    position: fixed;
+    text-align: center;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+
+    // left: center;
+  }
