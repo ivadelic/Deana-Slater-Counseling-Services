@@ -18,6 +18,14 @@ $L:   1170px;
   }
 }
 
+//Main Elements
+
+main {
+  @include outer-container;
+}
+
+//Grey background headings
+
 .heading_with_background {
 
     background: #BBB;
@@ -29,3 +37,9 @@ $L:   1170px;
 
 }
 
+//Navbar
+
+.navbar-default {
+  border-color: $super-light-gray;
+  background-color: $super-light-gray;
+}

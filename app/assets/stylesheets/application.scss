@@ -4,8 +4,8 @@
 @import "base/grid-settings";
 @import "base/variables";
 @import "base/mixins";
-@import "base/layout";
 @import "neat";
+@import "base/layout";
 @import "base/base";
 
 @import "homes";
@@ -20,6 +20,4 @@
 //@import "bootstrap-sprockets"
 //@import "bootstrap"
 
-main {
-  @include outer-container;
-}
+

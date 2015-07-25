@@ -30,6 +30,7 @@ gem "better_errors"
 gem "favorite_things"
 gem "cocoon"
 # gem 'simple_form'
+gem "figaro"
 
 gem 'quiet_assets'
 gem "bourbon"

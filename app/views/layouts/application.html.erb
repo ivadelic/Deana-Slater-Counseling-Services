@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Figaro.env.google_maps_api}" %>
+
+   <%= javascript_include_tag 'application' %>
+
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -24,7 +28,6 @@
   <%= csrf_meta_tags %>
 
   <title>Deanna Slater</title>
-  <%# javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%# csrf_meta_tags %>
 </head>
   <body>
