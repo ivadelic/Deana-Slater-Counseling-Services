@@ -22,6 +22,8 @@ $L:   1170px;
 
 main {
   @include outer-container;
+  padding: $base-padding;
+
 }
 
 //Grey background headings

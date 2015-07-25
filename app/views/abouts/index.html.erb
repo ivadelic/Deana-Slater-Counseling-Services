@@ -1,6 +1,9 @@
 <main>
   <body>
-  <% @abouts.each do |about| %>
+  <div class="side-image">
+  <div class="images-wrapper"></div>
+    <div class="side-image-content">
+       <% @abouts.each do |about| %>
     <div class="about-container">
       <div id= "about-main-title">
         <h1 class="heading_with_background"><%= about.main_title %></h1>
@@ -32,16 +35,18 @@
       </div>
     </div>
 
-    <% if current_admin %>
-      <div id="about_buttons">
-        <%= link_to "Edit", edit_about_path(about) %>
-        <%= link_to "Delete", about_path(about), method: :delete, data: {confirm: "Are you sure you want to delete this bio?"} %>
-      </div>
+      <% if current_admin %>
+        <div id="about_buttons">
+          <%= link_to "Edit", edit_about_path(about) %>
+          <%= link_to "Delete", about_path(about), method: :delete, data: {confirm: "Are you sure you want to delete this bio?"} %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <% if current_admin %>
-    <%= link_to "New", new_about_path(@about)%>
-  <% end %>
+      <% if current_admin %>
+        <%= link_to "New", new_about_path(@about)%>
+      <% end %>
+    </div>
+  </div>
   </body>
 </main>
