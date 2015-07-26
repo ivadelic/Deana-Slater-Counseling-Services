@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # get "about" => "abouts#index", :as => "about"
   # get "contact_location" => "contacts#index", :as => "contact_location"
 
-  resources :admins, only: [:new, :create]
+  resources :admins, only: [:new, :create, :index]
   resources :sessions, only: [:new, :create, :destroy]
   resources :abouts
   resources :resources

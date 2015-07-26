@@ -2,9 +2,9 @@ class AdminsController < ApplicationController
 
   def index
     if params[:approved] == "false"
-      @users = User.find_all_by_approved(false)
+      @admins = Admin.find_all_by_approved(false)
     else
-      @users = User.all
+      @admins = Admin.all
     end
   end
 
