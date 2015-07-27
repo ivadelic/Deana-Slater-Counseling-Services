@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717181013) do
+ActiveRecord::Schema.define(version: 20150725193236) do
 
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at",                     null: false
@@ -30,10 +30,38 @@ ActiveRecord::Schema.define(version: 20150717181013) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email"
-    t.string   "password_hash"
-    t.string   "password_salt"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.string   "password_digest"
+    t.boolean  "approved",        default: false, null: false
+  end
+
+  add_index "admins", ["approved"], name: "index_admins_on_approved"
+
+  create_table "articlepoints", force: :cascade do |t|
+    t.string   "article_name"
+    t.string   "article_link"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "resource_id"
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string   "main_title"
+    t.string   "name"
+    t.text     "credits"
+    t.string   "email"
+    t.string   "phone_number"
+    t.text     "description"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "address"
+  end
+
+  create_table "faqs", force: :cascade do |t|
+    t.string   "main_title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "homes", force: :cascade do |t|
@@ -41,6 +69,51 @@ ActiveRecord::Schema.define(version: 20150717181013) do
     t.string   "background_photo"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "propoints", force: :cascade do |t|
+    t.text     "point"
+    t.integer  "about_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "propoints", ["about_id"], name: "index_propoints_on_about_id"
+
+  create_table "questions", force: :cascade do |t|
+    t.text     "question"
+    t.text     "answer"
+    t.integer  "faq_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "questions", ["faq_id"], name: "index_questions_on_faq_id"
+
+  create_table "resources", force: :cascade do |t|
+    t.string   "main_title"
+    t.text     "main_paragraph"
+    t.string   "telephone_title"
+    t.string   "website_title"
+    t.string   "article_title"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "telpoints", force: :cascade do |t|
+    t.string   "telephone_company"
+    t.string   "telephone_number"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "resource_id"
+  end
+
+  create_table "webpoints", force: :cascade do |t|
+    t.string   "website_company"
+    t.string   "website_link"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "resource_id"
   end
 
 end

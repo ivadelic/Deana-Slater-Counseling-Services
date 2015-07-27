@@ -1,1 +1,28 @@
-<h1>Frequently Asked Questions</h1>
+<main>
+  <% @faqs.each do |faq| %>
+  <!-- Main -->
+  <div class="faq-container">
+
+    <div id= "faq-main-title">
+      <h1 class="heading_with_background"><%= faq.main_title %></h1>
+    </div>
+
+    <div id="faq_nested_routes">
+        <% faq.questions.each do |f| %>
+          <h3><%= f.question %></h3>
+          <p><%= f.answer %></p>
+        <% end %>
+    </div>
+  </div>
+    <% if current_admin %>
+      <div class= "faq-buttons">
+        <%= link_to "Edit", edit_faq_path(faq) %>
+        <%= link_to "Delete", faq_path(faq), method: :delete, data: {confirm: "Are you sure you want to delete this entire FAQs?"} %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <% if current_admin %>
+    <%= link_to "New", new_faq_path(@faq)%>
+  <% end %>
+</main>

@@ -1,26 +1,67 @@
-<h1>Resources and Links</h1>
-<p>If you are in crisis and require emergency assistance please go to the nearest emergency department or call 911</p>
+<main>
+<% @resources.each do |resource| %>
+<!-- Main -->
+  <div class="resource-container">
 
-<h2>Telephone:</h2>
-  <ul>
-    <li>Anishnawbe Mental Health Crisis Management Services (Aboriginal clients) – 416-891-8606</li>
-    <li>Assaulted Women’s Helpline – 416-863-0511 or 1-866-863-0511</li>
-    <li>Kids Help Phone – 1-800-668-6868</li>
-    <li>Toronto Distress Centre – 416-480-4357</li>
-    <li>Toronto Rape Crisis Centre – 416-597-8808</li>
-  </ul>
-<h2>Websites:</h2>
-  <ul>
-    <li>Canadian Mental Health Association</li>
-    <p>http://toronto.cmha.ca/</p>
-    <li>Centre for Addiction and Mental Health</li>
-    <p>http://www.camh.ca/en/hospital/Pages/home.aspx</p>
-    <li>Distress Centre</li>
-    <p>https://www.torontodistresscentre.com/</p>
-  </ul>
-<h2>Articles:</h2>
+    <div id= "resource-main-title" >
+      <h1 class="heading_with_background"><%= resource.main_title %></h1>
+    </div>
+    <div id="resource-main-paragraph">
+      <p><%= resource.main_paragraph %></p>
+    </div>
 
-<p>(Coming soon)</p>
-<%# if current_admin %>
-  <button><%# link_to "Edit", edit_about_path(@abouts) %></button>
-<%# end %>
+<!-- Phone -->
+    <div id="resource-telephone-title">
+      <h4><%= resource.telephone_title %></h4>
+    </div>
+
+    <div id="resource_telephone_points">
+      <ul>
+        <% resource.telpoints.each do |telpoint| %>
+          <li><%= telpoint.telephone_company %></li>
+          <a href= "tel:<%= telpoint.telephone_number %>"><%= telpoint.telephone_number %></a>
+        <% end %>
+      </ul>
+    </div>
+
+<!-- Website -->
+    <div id="resource-website-title">
+      <h4><%= resource.website_title %></h4>
+    </div>
+
+    <div id="resource_website_points">
+      <ul>
+        <% resource.webpoints.each do |webpoint| %>
+          <li><%= webpoint.website_company %><br/></li>
+           <a href= "<%= webpoint.website_link %>" target="_blank"><%= webpoint.website_link %></a>
+        <% end %>
+      </ul>
+    </div>
+
+<!-- Article -->
+    <div id="resource-article-title">
+      <h4><%= resource.article_title %></h4>
+    </div>
+
+    <div id="resource_website_points">
+      <ul>
+        <% resource.articlepoints.each do |articlepoint| %>
+          <li><%= articlepoint.article_name %></li>
+           <a href= "<%= articlepoint.article_link %>" target="_blank"><%= articlepoint.article_link %></a>
+        <% end %>
+      </ul>
+    </div>
+
+  </div>
+
+  <% if current_admin %>
+      <%= link_to "Edit", edit_resource_path(resource) %>
+      <%= link_to "Delete", resource_path(resource), method: :delete, data: {confirm: "Are you sure you want to delete this bio?"} %>
+  <% end %>
+
+<% end %>
+
+  <% if current_admin %>
+      <%= link_to "New", new_resource_path(@resource)%>
+  <% end %>
+</main>

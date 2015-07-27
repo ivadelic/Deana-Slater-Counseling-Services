@@ -1,0 +1,11 @@
+<div class='nested-fields'>
+  <div class="field">
+    <%= f.label :website_company, "Name of Association for the Website Link" %>
+    <%= f.text_field :website_company %>
+  </div>
+  <div class="field">
+    <%= f.label :website_link, "Website Link" %>
+    <%= f.text_field :website_link %>
+  </div>
+  <%= link_to_remove_association "Remove Website Resource", f %>
+</div>

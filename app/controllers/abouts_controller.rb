@@ -1,10 +1,12 @@
 class AboutsController < ApplicationController
   def index
     @abouts = About.all
+    @propoints = Propoint.all
   end
 
   def new
     @about = About.new
+    # @about.propoint = Propoint.new
   end
 
   def create
@@ -18,13 +20,13 @@ class AboutsController < ApplicationController
   end
 
   def show
-    @avout = About.find(params[:id])
+    @about = About.find(params[:id])
   end
 
   def update
     @about = About.find(params[:id])
     if @about.update_attributes(about_params)
-      redirect_to abouts_path(@ahout)
+      redirect_to abouts_path(@about)
     else
       render :index
     end
@@ -32,6 +34,7 @@ class AboutsController < ApplicationController
 
   def edit
     @about = About.find(params[:id])
+    # @about.propoint = Propoint.find(params[:id])
   end
 
   def destroy
@@ -50,14 +53,10 @@ class AboutsController < ApplicationController
       :approach_paragraph,
       :education_title,
       :education_paragraph,
-      :professional_points_attributes: [
+      :propoints_attributes => [
         :id,
-        :text,
+        :point,
         :_destroy
-      ]
-      # :professional_membership_point1,
-      # :professional_membership_point2,
-      # :professional_membership_point3,
-      )
+      ])
   end
 end

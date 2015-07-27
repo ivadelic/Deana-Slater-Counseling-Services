@@ -1,17 +1,20 @@
 Rails.application.routes.draw do
-
   root :to => "homes#index"
 
   get "log_out" => "sessions#destroy", :as => "log_out"
-  get "log_in" => "sessions#new", :as => "log_in"
+  get "admin" => "sessions#new", :as => "admin"
   get "sign_up" => "admins#new", :as => "sign_up"
-  # root :to => "admins#new"
-  resources :admins
-  resources :sessions
+
+  # get "about" => "abouts#index", :as => "about"
+  # get "contact_location" => "contacts#index", :as => "contact_location"
+
+  resources :admins, only: [:new, :create, :index]
+  resources :sessions, only: [:new, :create, :destroy]
   resources :abouts
+  resources :resources
+  resources :faqs
+  resources :contacts
   resources :homes, only: [:edit, :index, :show]
-  resources :resources, only: [:edit, :index, :show]
-  resources :faqs, only: [:edit, :index, :delete]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

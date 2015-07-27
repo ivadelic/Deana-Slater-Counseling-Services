@@ -29,6 +29,17 @@ gem 'bcrypt', '~> 3.1.7'
 gem "better_errors"
 gem "favorite_things"
 gem "cocoon"
+# gem 'simple_form'
+gem "figaro"
+
+gem 'quiet_assets'
+gem "bourbon"
+gem "neat"
+gem "refills"
+#gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'next'
+gem "autoprefixer-rails"
+
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'

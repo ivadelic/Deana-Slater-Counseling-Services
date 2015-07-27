@@ -1,0 +1,22 @@
+<main>
+  <%= form_for @faq do |f| %>
+    <div class="abouts-form">
+      <div class="field">
+        <%= f.label :main_title %><br/>
+        <%= f.text_field :main_title %>
+      </div>
+
+      <div class="field">
+      <%= f.fields_for :questions do |questions_form| %><br/>
+        <%= render "question_fields", f: questions_form %>
+      </div>
+      <% end %>
+      <div class="about-links">
+        <%= link_to_add_association "Add A Question and Answer", f, :questions %>
+      </div>
+      <div class="submit-button">
+        <%= f.submit %>
+      </div>
+    </div>
+  <% end %>
+</main>

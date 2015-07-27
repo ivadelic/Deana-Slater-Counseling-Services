@@ -1,0 +1,56 @@
+// breakpoints
+
+$S:   320px;
+$M:   768px;
+$L:   1170px;
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; }
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; }
+  }
+}
+
+//Main Elements
+
+main {
+  @include outer-container;
+  padding: $base-padding;
+
+}
+
+//Grey background headings
+
+.heading_with_background {
+
+    background: #BBB;
+    color: white;
+    display: inline-block;
+    font-weight: 800;
+    margin-bottom: 1.3em;
+    padding: $base-padding;
+
+}
+
+//Navbar
+
+.navbar-default {
+  border-color: $super-light-gray;
+  background-color: $super-light-gray;
+  font-size: 1.1em;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 1.2em;
+    line-height: 20px;
+}
