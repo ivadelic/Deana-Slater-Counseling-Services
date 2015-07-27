@@ -44,4 +44,13 @@ main {
 .navbar-default {
   border-color: $super-light-gray;
   background-color: $super-light-gray;
+  font-size: 1.1em;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 1.2em;
+    line-height: 20px;
 }

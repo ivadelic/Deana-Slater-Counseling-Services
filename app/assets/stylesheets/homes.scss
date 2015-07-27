@@ -3,29 +3,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-  body.bg-img-div {
+body.bg-img-div {
     background: url(bg-img.jpg) no-repeat center center;
     background-position: center center;
 
-    height: 1100px;
+    height: 100vh;
     background-size: cover;
     position: relative;
     // @include linear-gradient(transparentize();
-  }
+}
 
 
-  .overlay {
-    font-size: 3.3em;
+.overlay {
+    font-size: 2.2em;
     background: #BBB;
     color: white;
     display: inline-block;
-    font-weight: 800;
+    font-weight: 900;
     margin-bottom: 1.3em;
     padding: $base-padding;
 
 
 
-    top: 50%;
+    top: 45%;
     position: fixed;
     text-align: center;
     display: block;
@@ -34,4 +34,30 @@
     right: 0;
 
     // left: center;
-  }
+}
+
+.enter{
+ font-size: 1.9em;
+ color: #909090 ;
+ background: white;
+ text-align: center;
+ padding: $base-padding;
+ text-decoration: none;
+ border: 2px solid;
+ border-radius: 25px;
+ font-weight: 900;
+
+ &:focus {
+    color: #fff;
+}
+&:hover {
+    text-decoration: none;
+}
+}
+
+.enter_container{
+    width: 10%;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-top: 50%;
+}
