@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "admin" => "sessions#new", :as => "admin"
-  get "sign_up" => "admins#new", :as => "sign_up"
+  #get "sign_up" => "admins#new", :as => "sign_up"
 
   # get "about" => "abouts#index", :as => "about"
   # get "contact_location" => "contacts#index", :as => "contact_location"

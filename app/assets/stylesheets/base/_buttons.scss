@@ -2,7 +2,7 @@
 button {
   @include appearance(none);
   -webkit-font-smoothing: antialiased;
-  background-color: $action-color;
+  background-color: $white;
   border-radius: $base-border-radius;
   border: none;
   color: #fff;
@@ -17,6 +17,7 @@ button {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  padding: $base_padding;
 
   &:hover,
   &:focus {

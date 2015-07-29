@@ -36,28 +36,36 @@ body.bg-img-div {
     // left: center;
 }
 
-.enter{
- font-size: 1.9em;
- color: #909090 ;
- background: white;
- text-align: center;
- padding: $base-padding;
- text-decoration: none;
- border: 2px solid;
- border-radius: 25px;
- font-weight: 900;
+//Enter Button
 
- &:focus {
-    color: #fff;
-}
-&:hover {
+.enter{
+    font-size: 1.9em;
+    color: #909090 ;
+    background: white;
+    text-align: center;
+    padding: $base-padding;
     text-decoration: none;
-}
+    border: 2px solid;
+    border-radius: 25px;
+    font-weight: 900;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .enter_container{
-    width: 10%;
-    margin-left: auto ;
-    margin-right: auto ;
-    margin-top: 50%;
+    position: fixed;
+    margin: auto;
+    position: fixed;
+    text-align: center;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 70%;
 }
+
+
+
+

@@ -17,6 +17,8 @@
     display: block;
     min-height: 40em;
     padding: 3em;
+    position: relative;
+    background-position: center center;
 
     @include media($large-screen) {
       @include span-columns(4);
