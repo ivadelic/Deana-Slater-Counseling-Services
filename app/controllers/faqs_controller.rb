@@ -1,4 +1,5 @@
 class FaqsController < ApplicationController
+  before_filter :authorize_admin, :except => [:index]
   def index
     @faqs = Faq.all
     @questions = Question.all
@@ -47,5 +48,8 @@ class FaqsController < ApplicationController
         :answer,
         :_destroy
       ])
+  end
+  def authorize_admin
+    redirect_to :abouts, :status => 401 unless current_admin
   end
 end

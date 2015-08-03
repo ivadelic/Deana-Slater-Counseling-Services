@@ -9,13 +9,13 @@ $L:   1170px;
 @mixin MQ($canvas) {
   @if $canvas == S {
    @media only screen and (min-width: $S) { @content; }
-  }
-  @else if $canvas == M {
+ }
+ @else if $canvas == M {
    @media only screen and (min-width: $M) { @content; }
-  }
-  @else if $canvas == L {
+ }
+ @else if $canvas == L {
    @media only screen and (min-width: $L) { @content; }
-  }
+ }
 }
 
 //Main Elements
@@ -30,12 +30,13 @@ main {
 
 .heading_with_background {
 
-    background: #BBB;
-    color: white;
-    display: inline-block;
-    font-weight: 800;
-    margin-bottom: 1.3em;
-    padding: $base-padding;
+  background: #BBB;
+  color: white;
+  display: inline-block;
+  font-weight: 800;
+  margin-bottom: 1.3em;
+  padding: $base-padding;
+  font-size: 1.5em;
 
 }
 
@@ -48,9 +49,17 @@ main {
 }
 
 .navbar-brand {
-    float: left;
-    height: 50px;
-    padding: 15px 15px;
-    font-size: 1.2em;
-    line-height: 20px;
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 1.2em;
+  line-height: 20px;
 }
+
+//Admin Buttons
+.admin-buttons{
+  display: inline;
+}
+
+
+

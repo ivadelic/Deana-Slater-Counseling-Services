@@ -1,25 +1,25 @@
 class AdminsController < ApplicationController
 
-  def index
-    if params[:approved] == "false"
-      @admins = Admin.find_all_by_approved(false)
-    else
-      @admins = Admin.all
-    end
-  end
+  # def index
+  #   if params[:approved] == "false"
+  #     @admins = Admin.find_all_by_approved(false)
+  #   else
+  #     @admins = Admin.all
+  #   end
+  # end
 
-  def new
-    @admin = Admin.new
-  end
+  # def new
+  #   @admin = Admin.new
+  # end
 
-  def create
-    @admin = Admin.new(admin_params)
-    if @admin.save
-      redirect_to root_url, :notice => "Signed up!"
-    else
-      render "new"
-    end
-  end
+  # def create
+  #   @admin = Admin.new(admin_params)
+  #   if @admin.save
+  #     redirect_to root_url, :notice => "Signed up!"
+  #   else
+  #     render "new"
+  #   end
+  # end
 
   private
   def admin_params

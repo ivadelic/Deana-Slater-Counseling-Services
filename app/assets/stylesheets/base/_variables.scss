@@ -3,9 +3,9 @@ $base-font-family: 'PT Serif Caption', serif;
 $heading-font-family: 'Cinzel', serif;
 
 // Font Sizes
-$base-font-size: 1.1em;
-$heading-font-size: 1.1em;
-$nav-font-size: 1.1em;
+$base-font-size: 1.2em;
+$heading-font-size: 1.2em;
+$nav-font-size: 1.2em;
 $link-font-size: 1.1em;
 
 // Line height
@@ -69,8 +69,8 @@ $side-image-background-bottom: #5DAC5D;
 $side-image-content-background: #F9F9F9;
 $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
 
-
-
+//Buttons
+$button-link-color: $light-gray;
 
 
 

@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  before_filter :authorize_admin, :except => [:index]
   def index
     @contacts = Contact.all
   end
@@ -57,6 +58,9 @@ class ContactsController < ApplicationController
       #   :_destroy
       # ]
       )
+  end
+  def authorize_admin
+    redirect_to :abouts, :status => 401 unless current_admin
   end
 end
 

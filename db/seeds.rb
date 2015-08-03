@@ -6,7 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+case Rails.env
+when "development"
 admin = Admin.create(
   :email => "admin_email",
   :password_digest => 'admin_crypted_password'
   )
+when "production"
+admin = Admin.create(
+  :email => "admin_email",
+  :password_digest => 'admin_crypted_password'
+  )
+end

@@ -1,4 +1,5 @@
 class AboutsController < ApplicationController
+  before_filter :authorize_admin, :except => [:index]
   def index
     @abouts = About.all
     @propoints = Propoint.all
@@ -57,6 +58,10 @@ class AboutsController < ApplicationController
         :id,
         :point,
         :_destroy
-      ])
+        ])
+  end
+
+  def authorize_admin
+    redirect_to :abouts, :status => 401 unless current_admin
   end
 end

@@ -1,4 +1,5 @@
 class ResourcesController < ApplicationController
+  before_filter :authorize_admin, :except => [:index]
   def index
     @resources = Resource.all
     @articlepoints = Articlepoint.all
@@ -43,32 +44,38 @@ class ResourcesController < ApplicationController
   end
 
   private
+
+  def authorize_admin
+    redirect_to :abouts, :status => 401 unless current_admin
+  end
+
   def resource_params
     params.require(:resource)
     .permit([
-    :main_title,
-    :main_paragraph,
-    :telephone_title,
-    :website_title,
-    :article_title,
+      :main_title,
+      :main_paragraph,
+      :telephone_title,
+      :website_title,
+      :article_title,
       :articlepoints_attributes =>[
         :id,
         :article_name,
         :article_link,
         :_destroy
-      ],
-      :webpoints_attributes => [
-        :id,
-        :website_company,
-        :website_link,
-        :_destroy
-      ],
-      :telpoints_attributes =>[
-      :id,
-      :telephone_company,
-      :telephone_number,
-      :_destroy
-      ]
-      ])
+        ],
+        :webpoints_attributes => [
+          :id,
+          :website_company,
+          :website_link,
+          :_destroy
+          ],
+          :telpoints_attributes =>[
+            :id,
+            :telephone_company,
+            :telephone_number,
+            :_destroy
+          ]
+          ])
   end
 end
+
