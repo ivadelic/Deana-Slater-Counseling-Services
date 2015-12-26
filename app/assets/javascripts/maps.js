@@ -11,7 +11,7 @@ var options = {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   this.canvas = new google.maps.Map(this.mapElem, options);
-}
+};
 
 //Add marker
 
@@ -20,10 +20,10 @@ Map.prototype.addMarker = function(latitude, longitude){
     position: {lat: latitude, lng: longitude},
     map: this.canvas,
     title: "Deana Slater Counselling Services"
-  }
+  };
 
   var myMarker = new google.maps.Marker(options);
-}
+};
 
 $(document).on("ready page:load", function(){
   if ($("#map-canvas").length){

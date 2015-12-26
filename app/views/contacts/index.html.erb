@@ -18,12 +18,11 @@
             <p><%= contact.description %></p>
           </div>
           <div id="contact_address">
-          <p><%= contact.address %></p>
+          <p><a href="https://www.google.com/maps/place/80+Carlton+St,+Toronto,+ON+M5B+1L6,+Canada/@43.662139,-79.3808959,17z/data=!3m1!4b1!4m2!3m1!1s0x89d4cb4b6bc500a3:0x3a17da69e5ad362e?hl=en-US" target="_blank"><%= contact.address %></a></p>
         </div>
         <div id="contact_email">
         <%= image_tag('mail.png', class: "mail_icons") %>
-          <p><%= contact.email %></p>
-          <p><a href="mailto:<%= contact.email %>" target="_top">Send email to Deana Slater</a></p>
+          <p><a href="mailto:<%= contact.email %>" target="_top"><%= contact.email %></a></p>
         </div>
         <div id="contact_phonenumber">
         <%= image_tag('phone.png', class: "phone_icons") %>

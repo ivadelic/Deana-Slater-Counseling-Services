@@ -30,7 +30,7 @@
 
   <%= csrf_meta_tags %>
 
-  <title>Deanna Slater</title>
+  <title>Deana Slater</title>
   <%# csrf_meta_tags %>
 </head>
 <body>
@@ -54,7 +54,7 @@
           <li><a href="/abouts"><span>About</span></a></li>
           <li><a href="/resources"><span>Resources</span></a></li>
           <li><a href="/faqs"><span>FAQs</span></a></li>
-          <li><a href="/contacts"><span>Contact/Location</span></a>
+          <li><a href="/contacts"><span>Contact</span></a>
             <% if current_admin %>
             <li><a href="/log_out" class="log_out">Log Out</a></li>
             <% end %>
@@ -70,7 +70,9 @@
     <% if alert %>
     <div class="alert alert-danger"><%= alert %></div>
     <% end %>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
 
   </body>
   </html>
