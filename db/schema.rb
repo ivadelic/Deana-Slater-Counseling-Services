@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150725193236) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
@@ -30,13 +33,12 @@ ActiveRecord::Schema.define(version: 20150725193236) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.string   "password_digest"
-    t.boolean  "approved",        default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "approved",   default: false, null: false
   end
 
-  add_index "admins", ["approved"], name: "index_admins_on_approved"
+  add_index "admins", ["approved"], name: "index_admins_on_approved", using: :btree
 
   create_table "articlepoints", force: :cascade do |t|
     t.string   "article_name"
@@ -78,7 +80,7 @@ ActiveRecord::Schema.define(version: 20150725193236) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "propoints", ["about_id"], name: "index_propoints_on_about_id"
+  add_index "propoints", ["about_id"], name: "index_propoints_on_about_id", using: :btree
 
   create_table "questions", force: :cascade do |t|
     t.text     "question"
@@ -88,7 +90,7 @@ ActiveRecord::Schema.define(version: 20150725193236) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "questions", ["faq_id"], name: "index_questions_on_faq_id"
+  add_index "questions", ["faq_id"], name: "index_questions_on_faq_id", using: :btree
 
   create_table "resources", force: :cascade do |t|
     t.string   "main_title"
@@ -116,4 +118,6 @@ ActiveRecord::Schema.define(version: 20150725193236) do
     t.integer  "resource_id"
   end
 
+  add_foreign_key "propoints", "abouts"
+  add_foreign_key "questions", "faqs"
 end

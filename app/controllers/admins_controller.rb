@@ -27,6 +27,7 @@ class AdminsController < ApplicationController
     .permit(
       :email,
       :password,
+      :password_digest,
       :password_confirmation
       )
   end
