@@ -6,8 +6,8 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
 google_maps_api: AIzaSyBROsr7gvXULBlTlczFNWteUwM6LZhvnCI
-admin_email: deanacmslater@gmail.com
-admin_crypted_password: $2a$08$nQ4WEFBxtvZhBlcBjSRLB.6RZBeKuAn1/CIov2duwL1HW.OGNKTCy
+# admin_email: deanacmslater@gmail.com
+# admin_crypted_password: $2a$10$uk.zLWY7b6HWS0zrhOdasuSYgIKcsrWFjeYL5VpoOZoA5RrW3jtA6
 
 # google_maps_api=AIzaSyBROsr7gvXULBlTlczFNWteUwM6LZhvnCI
 # admin_email=deanacmslater@gmail.com
