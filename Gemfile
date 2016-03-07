@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
-
+  gem 'pg'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -35,6 +35,7 @@ gem "neat"
 gem "refills"
 #gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'next'
 gem "autoprefixer-rails"
+gem 'aws-sdk', '~> 2'
 
 
 
@@ -61,7 +62,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+
   gem 'rails_12factor'
 end
 
