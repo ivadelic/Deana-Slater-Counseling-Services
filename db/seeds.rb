@@ -16,7 +16,5 @@ when "production"
   admin = Admin.create(
     :email => Figaro.env.admin_email,
     :password_digest => Figaro.env.admin_crypted_password
-  # :email => "admin_email",
-  # :password_digest => 'admin_crypted_password'
   )
 end
