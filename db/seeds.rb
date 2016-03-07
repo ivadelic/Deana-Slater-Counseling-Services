@@ -8,13 +8,15 @@
 
 case Rails.env
 when "development"
-admin = Admin.create(
-  :email => "admin_email",
-  :password_digest => 'admin_crypted_password'
-  )
+  admin = Admin.create(
+    :email => Figaro.env.admin_email,
+    :password_digest => Figaro.env.admin_crypted_password
+    )
 when "production"
-admin = Admin.create(
-  :email => "admin_email",
-  :password_digest => 'admin_crypted_password'
+  admin = Admin.create(
+    :email => Figaro.env.admin_email,
+    :password_digest => Figaro.env.admin_crypted_password
+  # :email => "admin_email",
+  # :password_digest => 'admin_crypted_password'
   )
 end

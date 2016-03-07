@@ -28,7 +28,7 @@ class AdminsController < ApplicationController
       :email,
       :password,
       :password_digest,
-      :password_confirmation
+      # :password_confirmation
       )
   end
 end

@@ -1,6 +1,9 @@
 class Admin < ActiveRecord::Base
   has_secure_password
 
+  validates :email, :confirmation => true
+  validates :password_digest, :presence => true
+
   has_one :home
   has_one :about
   has_one :resource
