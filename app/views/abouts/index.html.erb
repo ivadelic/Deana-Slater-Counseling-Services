@@ -31,8 +31,8 @@
           </div>
           <div id="about-professional-membership-paragraph">
 
-          <li type="circle"><%= about.professional_membership_point1 %></li>
-           <li type="circle"><%= about.professional_membership_point2 %></li>
+            <li type="circle"><%= about.professional_membership_point1 %></li>
+            <li type="circle"><%= about.professional_membership_point2 %></li>
             <li type="circle"><%= about.professional_membership_point3 %></li>
 <!--             <div id="professional_membership_point1">
 
@@ -42,13 +42,13 @@
             </div> -->
           </div>
         </div>
-      <div class="admin-buttons">
-        <% if current_admin %>
-        <button><%= link_to "Edit", edit_about_path(about) %></button>
-        <button><%= link_to "Delete", about_path(about), method: :delete, data: {confirm: "Are you sure you want to delete this bio?"} %></button>
+        <div class="admin-buttons">
+          <% if current_admin %>
+          <button><%= link_to "Edit", edit_about_path(about) %></button>
+          <button><%= link_to "Delete", about_path(about), method: :delete, data: {confirm: "Are you sure you want to delete this bio?"} %></button>
+          <% end %>
+        </div>
         <% end %>
-      </div>
-      <% end %>
 
         <% if current_admin %>
         <button class="new-about"><%= link_to "New", new_about_path(@about)%></button>
