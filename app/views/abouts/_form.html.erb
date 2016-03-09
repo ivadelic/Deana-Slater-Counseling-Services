@@ -35,10 +35,10 @@
         <%= f.fields_for :propoints do |propoints_form| %><br/>
           <%= render "propoint_fields", f: propoints_form %>
         </div>
-        <% end %>
         <div class="about-links">
           <%= link_to_add_association "Add A Professional Membership", f, :propoints %>
         </div>
+        <% end %>
         <div class="submit-button">
           <%= f.submit %>
         </div>
