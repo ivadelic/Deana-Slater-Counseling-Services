@@ -18,12 +18,12 @@
   min-height: 12em;
   padding: 1.1em;
 
-  @include media($large-screen) {
-    @include span-columns(4);
-    background-position: bottom;
-    background-size: cover;
-    border-right: $side-image-border;
-  }
+  // @include media($large-screen) {
+  //   @include span-columns(4);
+  //   background-position: bottom;
+  //   background-size: cover;
+  //   border-right: $side-image-border;
+  // }
 }
 
 .contact-container{
