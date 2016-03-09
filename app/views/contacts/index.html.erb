@@ -1,48 +1,55 @@
 <body>
   <main>
-  <h1 class= "heading_with_background">Contact and Location</h1>
+    <h1 class= "heading_with_background">Contact and Location</h1>
 
-  <div class="entire-contact-container">
+    <div class="entire-contact-container">
       <div class="images-wrapper">
-          <div id="map-canvas"></div>
+        <div id="map-canvas"></div>
       </div>
       <hr>
       <div class="contact-container">
         <% @contacts.each do |contact| %>
-          <div id= "contact-main-title">
-          </div>
-          <div id="contact_name_and_credentials">
-            <h2><%= contact.name %></h2>
-            <h2><%= contact.credits %></h2>
-          </div>
-          <div id="contact_description">
-            <p><%= contact.description %></p>
-          </div>
-          <div id="contact_address">
+        <div id= "contact-main-title">
+        </div>
+        <div id="contact_name_and_credentials">
+          <h2><%= contact.name %></h2>
+          <h2><%= contact.credits %></h2>
+        </div>
+        <div id="contact_description">
+          <p><%= contact.description %></p>
+        </div>
+        <div id="contact_address">
           <p><a href="https://www.google.com/maps/place/80+Carlton+St,+Toronto,+ON+M5B+1L6,+Canada/@43.662139,-79.3808959,17z/data=!3m1!4b1!4m2!3m1!1s0x89d4cb4b6bc500a3:0x3a17da69e5ad362e?hl=en-US" target="_blank"><%= contact.address %></a></p>
         </div>
-        <div id="contact_email">
-        <%= image_tag('https://s3.amazonaws.com/deana-website/mail.png', class: "mail_icons") %>
-          <p><a href="mailto:<%= contact.email %>" target="_top"><%= contact.email %></a></p>
-        </div>
-        <div id="contact_phonenumber">
-        <%= image_tag('https://s3.amazonaws.com/deana-website/phone.png', class: "phone_icons") %>
-          <p><a href= "tel:<%= contact.phone_number %>"><%= contact.phone_number %></a></p>
-        </div>
-      </div>
-        </div>
-          <% if current_admin %>
-            <div id="admin-buttons">
-              <button><%= link_to "Edit", edit_contact_path(contact) %></button>
-              <button><%= link_to "Delete", contact_path(contact), method: :delete, data: {confirm: "Are you sure you want to delete this entire section?"} %></button>
-          <% end %>
-        <% end %>
+        <table>
+          <tr>
+           <div .="contact_email-container">
+           <td><%= image_tag('https://s3.amazonaws.com/deana-website/mail.png', class: "mail_icons") %></td>
+            <td><p><a .="contact-email" href="mailto:<%= contact.email %>" target="_top"><%= contact.email %></a></p></td>
+          </div>
+        </tr>
 
-        <% if current_admin %>
-          <button><%= link_to "New", new_contact_path(@contact)%></button>
-        <% end %>
-      </div>
+
+        <div id="contact_phonenumber">
+          <td><%= image_tag('https://s3.amazonaws.com/deana-website/phone.png', class: "phone_icons") %></td>
+          <td><p><a href= "tel:<%= contact.phone_number %>"><%= contact.phone_number %></a></p></td>
+        </div>
+      </table>
+
     </div>
-    </br>
-  </main>
+  </div>
+  <% if current_admin %>
+  <div id="admin-buttons">
+    <button><%= link_to "Edit", edit_contact_path(contact) %></button>
+    <button><%= link_to "Delete", contact_path(contact), method: :delete, data: {confirm: "Are you sure you want to delete this entire section?"} %></button>
+    <% end %>
+    <% end %>
+
+    <% if current_admin %>
+    <button><%= link_to "New", new_contact_path(@contact)%></button>
+    <% end %>
+  </div>
+</div>
+</br>
+</main>
 </body>
