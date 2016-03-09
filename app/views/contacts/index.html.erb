@@ -22,21 +22,21 @@
         <table>
         <tr>
           <td class="image-td"><%= image_tag('https://s3.amazonaws.com/deana-website/google_pin.png', class: "google_pin") %></td>
-          <td><div id="contact_address">
+          <td class="info-td"><div id="contact_address">
           <p><a href="https://www.google.com/maps/place/80+Carlton+St,+Toronto,+ON+M5B+1L6,+Canada/@43.662139,-79.3808959,17z/data=!3m1!4b1!4m2!3m1!1s0x89d4cb4b6bc500a3:0x3a17da69e5ad362e?hl=en-US" target="_blank"><%= contact.address %></a></p>
         </div></td>
         </tr>
           <tr>
            <div .="contact_email-container">
            <td class='image-td'><%= image_tag('https://s3.amazonaws.com/deana-website/mail.png', class: "mail_icons") %></td>
-            <td><p><a .="contact-email" href="mailto:<%= contact.email %>" target="_top"><%= contact.email %></a></p></td>
+            <td class="info-td"><p><a .="contact-email" href="mailto:<%= contact.email %>" target="_top"><%= contact.email %></a></p></td>
           </div>
         </tr>
 
 
         <div id="contact_phonenumber">
           <td class='image-td'><%= image_tag('https://s3.amazonaws.com/deana-website/phone.png', class: "phone_icons") %></td>
-          <td><p><a href= "tel:<%= contact.phone_number %>"><%= contact.phone_number %></a></p></td>
+          <td class="info-td"><p><a href= "tel:<%= contact.phone_number %>"><%= contact.phone_number %></a></p></td>
         </div>
       </table>
 

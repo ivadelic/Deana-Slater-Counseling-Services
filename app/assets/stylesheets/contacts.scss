@@ -26,6 +26,10 @@
   // }
 }
 
+.info-td{
+  text-align: right;
+}
+
 .contact-container{
   @include span-columns(12);
   padding: 1em 1em 4em 1em;
