@@ -32,13 +32,16 @@
       </div> -->
       <h3>Professional Memberships</h3>
         <div class="field">
-        <%= f.fields_for :propoints do |propoints_form| %><br/>
-          <%= render "propoint_fields", f: propoints_form %>
+        <%=f.label :professional_membership_point1, "Professional Points" %>
+        <%=f.text_area :professional_membership_point1 %>
+        </div>
+        <%# f.fields_for :propoints do |propoints_form| %><br/>
+          <%# render "propoint_fields", f: propoints_form %>
         </div>
         <div class="about-links">
-          <%= link_to_add_association "Add A Professional Membership", f, :propoints %>
+          <%# link_to_add_association "Add A Professional Membership", f, :propoints %>
         </div>
-        <% end %>
+        <%# end %>
         <div class="submit-button">
           <%= f.submit %>
         </div>

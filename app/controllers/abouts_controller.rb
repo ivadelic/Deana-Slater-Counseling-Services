@@ -54,6 +54,7 @@ class AboutsController < ApplicationController
       :approach_paragraph,
       :education_title,
       :education_paragraph,
+      :professional_membership_point1,
       :propoints_attributes => [
         :id,
         :point,

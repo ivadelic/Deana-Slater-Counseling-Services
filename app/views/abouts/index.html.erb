@@ -30,11 +30,13 @@
             <h4>Professional Memberships<%# about.professional_membership_title %></h4>
           </div>
           <div id="about-professional-membership-paragraph">
-            <ul>
-              <% about.propoints.each do |propoint| %>
-              <li type="circle"><%= propoint.point %></li>
-              <% end %>
-            </ul>
+          <p><%= about.professional_membership_point1 %></p>
+<!--             <div id="professional_membership_point1">
+
+              <%# about.propoints.each do |propoint| %>
+              <li type="circle"><%# propoint.point %></li>
+              <%# end %>
+            </div> -->
           </div>
         </div>
       <div class="admin-buttons">
@@ -46,8 +48,11 @@
       <% end %>
 
         <% if current_admin %>
-        <button><%= link_to "New", new_about_path(@about)%></button>
+        <button class="new-about"><%= link_to "New", new_about_path(@about)%></button>
         <% end %>
+        <br>
+        <br>
+        <br>
       </div>
     </div>
   </div>
