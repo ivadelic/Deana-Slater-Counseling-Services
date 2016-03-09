@@ -56,12 +56,8 @@ class AboutsController < ApplicationController
       :education_paragraph,
       :professional_membership_point1,
       :professional_membership_point2,
-      :professional_membership_point3,
-      :propoints_attributes => [
-        :id,
-        :point,
-        :_destroy
-        ])
+      :professional_membership_point3
+      )
   end
 
   def authorize_admin

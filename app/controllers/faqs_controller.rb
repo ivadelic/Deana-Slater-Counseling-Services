@@ -16,7 +16,7 @@ class FaqsController < ApplicationController
   def create
     @faq = Faq.new(faq_params)
     if @faq.save
-      flash[:notice] = "New Faq section saved."
+      flash[:notice] = "New FAQ saved."
       redirect_to faqs_path(@faq)
     else
       render :index
@@ -32,6 +32,7 @@ class FaqsController < ApplicationController
     end
   end
 
+
   def destroy
     @faq = Faq.find(params[:id])
     @faq.destroy
@@ -41,14 +42,13 @@ class FaqsController < ApplicationController
   private
   def faq_params
     params.require(:faq)
-    .permit(:main_title,
-      questions_attributes: [
-        :id,
-        :question,
-        :answer,
-        :_destroy
-      ])
+    .permit(
+      :main_title,
+      :question,
+      :answer
+      )
   end
+
   def authorize_admin
     redirect_to :abouts, :status => 401 unless current_admin
   end
