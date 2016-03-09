@@ -40,6 +40,11 @@
 
 
 //Icons
+.google_pin{
+  height: 32px;
+  margin-left: 13px;
+}
+
 .phone_icons {
   height: $phone-icon-size;
   width: $phone-icon-size;
@@ -48,4 +53,11 @@
 .mail_icons {
   height: $mail-icon-size;
   width: $mail-icon-size;
+}
+
+
+@media screen and (max-width: 420px){
+  .image-td {
+    width: 50px;
+  }
 }
