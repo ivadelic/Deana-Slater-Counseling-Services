@@ -6,16 +6,3 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
 google_maps_api: AIzaSyBROsr7gvXULBlTlczFNWteUwM6LZhvnCI
-# admin_email: deanacmslater@gmail.com
-# admin_crypted_password: $2a$10$uk.zLWY7b6HWS0zrhOdasuSYgIKcsrWFjeYL5VpoOZoA5RrW3jtA6
-
-# google_maps_api=AIzaSyBROsr7gvXULBlTlczFNWteUwM6LZhvnCI
-# admin_email=deanacmslater@gmail.com
-# admin_crypted_password=$2a$10$uk.zLWY7b6HWS0zrhOdasuSYgIKcsrWFjeYL5VpoOZoA5RrW3jtA6
-
-# devise:
-#     registrations:
-#       admin:
-#         signed_up_but_not_approved: 'You have signed up successfully but your account has not been approved by your administrator yet'
-#     failure:
-#       not_approved: 'Your account has not been approved by your administrator yet.'

@@ -1,18 +1,16 @@
 //Map
+function Map(mapElem){
+  this.mapElem = mapElem;
+}
 
-function initMap(){
-  function Map(mapElem){
-    this.mapElem = mapElem;
-  }
-
-  Map.prototype.init = function(latitude, longitude){
-    var options = {
-      center: {lat: latitude, lng: longitude},
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    this.canvas = new google.maps.Map(this.mapElem, options);
+Map.prototype.init = function(latitude, longitude){
+  var options = {
+    center: {lat: latitude, lng: longitude},
+    zoom: 15,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
   };
+  this.canvas = new google.maps.Map(this.mapElem, options);
+};
 
 //Add marker
 
@@ -34,7 +32,5 @@ $(document).on("ready page:load", function(){
     myMap.addMarker(43.662135, -79.378707);
   }
 });
-}
 
-initMap();
 
