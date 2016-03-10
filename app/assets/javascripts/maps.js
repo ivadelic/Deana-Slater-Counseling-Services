@@ -7,7 +7,7 @@ Map.prototype.init = function(latitude, longitude){
   var options = {
     center: {lat: latitude, lng: longitude},
     zoom: 15,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    // mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   this.canvas = new google.maps.Map(this.mapElem, options);
 };
