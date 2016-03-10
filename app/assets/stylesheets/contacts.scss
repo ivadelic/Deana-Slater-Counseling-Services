@@ -7,16 +7,12 @@
 }
 
 .images-wrapper{
+  min-height: 12em;
+  padding: 1.1em;
   #map-canvas{
     height: 30em;
     width: 100%;
   }
-  min-height: 12em;
-  padding: 1.1em;
-}
-
-.info-td{
-  text-align: right;
 }
 
 .contact-container{
