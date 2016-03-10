@@ -62,33 +62,16 @@
 @supports (overflow:-webkit-marquee) and (justify-content:inherit)
 {
 
-//Icons
-.google_pin{
-  height: 32px;
-  margin-left: 13px;
-}
-
-.phone_icons {
-  height: $phone-icon-size;
-  width: $phone-icon-size;
-}
-
-.mail_icons {
-  height: $mail-icon-size;
-  width: $mail-icon-size;
-}
-
-}
-
-@media screen and (max-width: 420px){
-  .image-td {
-    width: 50px;
+  @media screen and (max-width: 420px){
+    .image-td {
+      width: 50px;
+    }
   }
 }
 
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-//Icons
-.google_pin{
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+ .google_pin{
   height: 32px;
   margin-left: 13px;
 }
@@ -103,6 +86,25 @@
   width: $mail-icon-size;
 }
 
+.images-wrapper{
+  #map-canvas{
+    height: 30em;
+    width: 100%;
+  }
+  // background-color: $side-image-background-top;
+  // background-size: cover;
+  // border-bottom: $side-image-border;
+  // display: block;
+  min-height: 12em;
+  padding: 1.1em;
+
+  // @include media($large-screen) {
+  //   @include span-columns(4);
+  //   background-position: bottom;
+  //   background-size: cover;
+  //   border-right: $side-image-border;
+  // }
+}
 }
 
 
