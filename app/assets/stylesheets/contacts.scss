@@ -48,12 +48,32 @@
   width: $mail-icon-size;
 }
 
+//For Safari
+img.google_pin{
+  height: 32px;
+  margin-left: 13px;
+}
 
-// @media screen and (max-width: 420px) and (-webkit-min-device-pixel-ratio:0){
-//   .image-td {
-//     width: 50px;
-//   }
-// }
+img.phone_icons{
+  height: $phone-icon-size;
+  width: $phone-icon-size;
+}
+
+img.mail_icons{
+  height: $mail-icon-size;
+  width: $mail-icon-size;
+}
+
+div.images-wrapper{
+  min-height: 12em;
+  padding: 1.1em;
+}
+
+@media screen and (max-width: 420px) and (-webkit-min-device-pixel-ratio:0){
+  .image-td {
+    width: 50px;
+  }
+}
 
 
 
