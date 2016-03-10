@@ -85,3 +85,26 @@
     width: 50px;
   }
 }
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+//Icons
+.google_pin{
+  height: 32px;
+  margin-left: 13px;
+}
+
+.phone_icons {
+  height: $phone-icon-size;
+  width: $phone-icon-size;
+}
+
+.mail_icons {
+  height: $mail-icon-size;
+  width: $mail-icon-size;
+}
+
+}
+
+
+
+
