@@ -15,7 +15,3 @@
 //= require turbolinks
 //= require cocoon
 //= require_tree .
-
-$(document).on('click',function(){
-  $('.navbar-collapse').collapse('hide');
-});

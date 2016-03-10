@@ -2,30 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@include media($large-screen) {
-  @include row(table);
-}
-
 .images-wrapper{
   min-height: 12em;
   padding: 1.1em;
+
   #map-canvas{
     height: 30em;
     width: 100%;
   }
-}
-
-.contact-container{
-  @include span-columns(12);
-  padding: 1em 1em 4em 1em;
-
-  @include media($large-screen) {
-    @include span-columns(8);
-    padding: $base-padding;
-  }
-  @include reset-display();
 
 }
+
+// .contact-container{
+//   @include span-columns(12);
+//   padding: 1em 1em 4em 1em;
+
+//   @include media($large-screen){
+//     @include span-columns(8);
+//     padding: $base-padding;
+//   }
+
+//   @include reset-display();
+
+// }
+
+// @include media($large-screen) {
+//   @include row(table);
+// }
+
 
 
 //Icons
@@ -34,40 +38,42 @@
   margin-left: 13px;
 }
 
-.phone_icons {
+.phone_icons{
   height: $phone-icon-size;
   width: $phone-icon-size;
 }
 
-.mail_icons {
+.mail_icons{
   height: $mail-icon-size;
   width: $mail-icon-size;
 }
 
-//For Safari
-img.google_pin{
-  height: 32px;
-  margin-left: 13px;
-}
 
-img.phone_icons{
-  height: $phone-icon-size;
-  width: $phone-icon-size;
-}
 
-img.mail_icons{
-  height: $mail-icon-size;
-  width: $mail-icon-size;
-}
-
-div.images-wrapper{
-  min-height: 12em;
-  padding: 1.1em;
-}
-
-@media screen and (max-width: 420px) and (-webkit-min-device-pixel-ratio:0){
+@media screen and (max-width: 470px){
   .image-td {
     width: 50px;
+  }
+
+  //For Safari
+  img.google_pin{
+    height: 32px;
+    margin-left: 13px;
+  }
+
+  img.phone_icons{
+    height: $phone-icon-size;
+    width: $phone-icon-size;
+  }
+
+  img.mail_icons{
+    height: $mail-icon-size;
+    width: $mail-icon-size;
+  }
+
+  div.images-wrapper{
+    min-height: 12em;
+    padding: 1.1em;
   }
 }
 

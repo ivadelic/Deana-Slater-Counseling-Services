@@ -18,6 +18,7 @@
 .new-about {
   margin-top: 14px;
 }
+
 .side-image-content {
   h1 {
     margin-bottom: 0.9em;
@@ -34,10 +35,12 @@
   #about-main-title{
     margin-top: 20px;
   }
+
   .image {
     margin-left: auto;
     margin-right: auto;
   }
+
   .right-col {
     border-left: none;
   }
@@ -52,6 +55,7 @@
 }
 
 @media screen and (max-width: 320px){
+
   .image{
     margin-left: auto;
     margin-right: auto;
