@@ -4,7 +4,7 @@
 
 
 body.bg-img-div {
-    background: url("https://s3.amazonaws.com/deana-website/bg-img.jpg") no-repeat center center;
+    background: url("https://s3.amazonaws.com/equinox-website/background_image.jpg") no-repeat center center;
     background-position: center center;
 
     height: 100vh;
@@ -13,6 +13,9 @@ body.bg-img-div {
     // @include linear-gradient(transparentize();
 }
 
+p {
+    white-space: pre-line;
+}
 
 .overlay {
     font-size: 2.2em;
