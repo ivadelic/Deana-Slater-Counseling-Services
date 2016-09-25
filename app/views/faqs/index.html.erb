@@ -1,17 +1,19 @@
 <main>
   <!-- Main -->
   <div class="faq-container">
-
     <div id= "faq-main-title">
-      <h1 class="heading_with_background">Frequently Asked Questions</h1>
+      <h1 class="heading_with_background">About Our Therapists</h1>
     </div>
 
     <% @faqs.each do |faq| %>
     <div id="faq_nested_routes">
-
-      <h3><%= faq.question %></h3>
-      <p><%= faq.answer %></p>
-
+      <div class="side-image">
+        <div class="images-wrapper"></div>
+        <div class="side-image-content">
+          <h1><%= faq.question %></h1>
+          <p><%= faq.answer %></p>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :abouts
   resources :resources
-  resources :faqs
+  resources :faqs, :our_therapists
   resources :contacts
   resources :homes, only: [:edit, :index, :show]
 

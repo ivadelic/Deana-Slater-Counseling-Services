@@ -2,31 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// General
+html {
+    position: relative;
+    min-height: 100%;
+}
 
-body.bg-img-div {
-    background: url("https://s3.amazonaws.com/deana-website/bg-img.jpg") no-repeat center center;
+body {
+    margin: 0 0 100px;
+}
+
+p {
+    white-space: pre-line;
+}
+
+.bg-img-div {
+    background: url("https://s3-us-west-2.amazonaws.com/equinox-website/background_image.jpg") no-repeat center center;
     background-position: center center;
 
     height: 100vh;
+    width: 100%;
     background-size: cover;
     position: relative;
     // @include linear-gradient(transparentize();
 }
 
+.navbar-default {
+    border-color: #156f7c;
+    background-color: #156f7c;
+}
+
+nav {
+    span {
+        color: #fafafa;
+    }
+    span:hover{
+       color: #909090;
+   }
+}
+
+.background-container {
+    height: 740px;
+}
 
 .overlay {
     font-size: 2.2em;
-    background: #BBB;
+    background: rgba(8, 8, 8, 0.63);
     color: white;
-    display: inline-block;
     font-weight: 900;
     margin-bottom: 1.3em;
     padding: $base-padding;
     z-index: -2;
-
-
+    width: 100%;
+    position: absolute;
     top: 45%;
-    position: fixed;
+
     text-align: center;
     display: block;
     margin: auto;
@@ -36,18 +66,30 @@ body.bg-img-div {
     // left: center;
 }
 
+.overlay_logo {
+    height: auto;
+    width: 35px;
+    margin-right: 10px;
+}
+
+.overlay-h1 {
+    margin: 0;
+}
 //Enter Button
 
 .enter{
     font-size: 1.9em;
-    color: #909090 ;
-    background: white;
+    color: #333;
+    background: rgba(255, 255, 255, 0.71);
     text-align: center;
     padding: $base-padding;
     text-decoration: none;
-    // border: 2px solid;
-    border-radius: 10%;
+    // border-radius: 10%;
     font-weight: 900;
+    top: 600px;
+    position: absolute;
+    left: 0;
+    right: 0;
 
     &:hover {
         text-decoration: none;
@@ -55,9 +97,6 @@ body.bg-img-div {
 }
 
 .enter_container{
-    position: fixed;
-    margin: auto;
-    position: fixed;
     text-align: center;
     display: block;
     margin: auto;
@@ -65,6 +104,84 @@ body.bg-img-div {
     right: 0;
     top: 70%;
 }
+
+.footer {
+  $base-spacing: 1.5em !default;
+  $action-color: #477DCA !default;
+  $medium-screen: 40em !default;
+  $large-screen: 53.75em !default;
+  $footer-background: desaturate(darken($action-color, 20%), 30%);
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+
+  background: $footer-background;
+  padding: ($base-spacing * 2) $gutter;
+  width: 100%;
+  position: absolute;
+  left: 0;
+
+  .footer-logo {
+    margin-bottom: 2em;
+    text-align: center;
+
+    img {
+      height: 3em;
+  }
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // margin-bottom: $base-spacing;
+}
+
+ul {
+    flex-basis: 13em;
+    flex-shrink: 0;
+    margin-bottom: $base-spacing;
+    padding: 0;
+}
+
+li {
+    line-height: 1.5em;
+    list-style: none;
+    text-align: center;
+}
+
+li a {
+    color: $footer-link-color;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: transparentize($footer-color, 0);
+  }
+}
+
+li h3 {
+    color: $footer-color;
+    font-size: 1em;
+    margin-bottom: 0.4em;
+}
+
+hr {
+    border: 1px solid transparentize($footer-disclaimer-color, 0.3);
+    margin: 0 auto $base-spacing;
+    width: 12em;
+}
+
+p {
+    color: $footer-disclaimer-color;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 35em;
+    text-align: center;
+}
+}
+
 
 
 
