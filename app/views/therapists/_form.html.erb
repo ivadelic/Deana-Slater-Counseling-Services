@@ -1,0 +1,51 @@
+<main>
+  <%= form_for @therapist do |f| %>
+  <div class="therapists-form">
+    <!-- Therapists Text -->
+    <div class="field">
+      <%= f.label :therapists_title %>
+      <%= f.text_field :therapists_title %>
+    </div>
+
+    <div class="field">
+      <%= f.label :therapists_text %>
+      <%= f.text_area :therapists_text %>
+    </div>
+
+    <!-- Therapist 1 -->
+    <div class="field">
+      <%= f.label :therapist1_title %>
+      <%= f.text_field :therapist1_title %>
+    </div>
+
+    <div class="field">
+      <%= f.label :therapist1_text %>
+      <%= f.text_area :therapist1_text %>
+    </div>
+
+    <div class="field">
+      <%= f.label :therapist1_link %>
+      <%= f.text_field :therapist1_link %>
+    </div>
+
+    <!-- Therapist 2 -->
+    <div class="field">
+      <%= f.label :therapist2_title %>
+      <%= f.text_field :therapist2_title %>
+    </div>
+
+    <div class="field">
+      <%= f.label :therapist2_text %>
+      <%= f.text_area :therapist2_text %>
+    </div>
+
+    <div class="field">
+      <%= f.label :therapist2_link %>
+      <%= f.text_field :therapist2_link %>
+    </div>
+  </div>
+  <div class="submit-button">
+    <%= f.submit %>
+  </div>
+  <% end %>
+</main>
