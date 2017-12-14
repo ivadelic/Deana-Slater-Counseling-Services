@@ -1,64 +1,60 @@
-// Place all the styles related to the abouts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// // Place all the styles related to the abouts controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.directional_nav {
-  height: 340px;
-  margin: 0 auto;
-  max-width: 940px;
-  position: relative;
-  top: -340px;
-}
-
-.previous_btn {
-  bottom: 0;
-  left: 100px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-}
-
-.next_btn {
-  bottom: 0;
-  margin: auto;
-  position: absolute;
-  right: 100px;
-  top: 0;
-}
-
-.previous_btn, .next_btn {
-  cursor: pointer;
-  height: 65px;
-  opacity: 0.5;
-  -webkit-transition: opacity 0.4s ease-in-out;
-  -moz-transition: opacity 0.4s ease-in-out;
-  -ms-transition: opacity 0.4s ease-in-out;
-  -o-transition: opacity 0.4s ease-in-out;
-  transition: opacity 0.4s ease-in-out;
-  width: 65px;
-}
-
-.previous_btn:hover, .next_btn:hover {
-  opacity: 1;
-}
-
-@media only screen and (max-width: 767px) {
-  .previous_btn {
-    left: 50px;
-  }
-  .next_btn {
-    right: 50px;
-  }
-}
-
-
-
-
-// .image {
-//   content: url("https://s3-us-west-2.amazonaws.com/equinox-website/equinox_logo_about.png");
-//   width: 370px;
+// .directional_nav {
+//   height: 340px;
+//   margin: 0 auto;
+//   max-width: 940px;
+//   position: relative;
+//   top: -340px;
 // }
+
+// .previous_btn {
+//   bottom: 0;
+//   left: 100px;
+//   margin: auto;
+//   position: absolute;
+//   top: 0;
+// }
+
+// .next_btn {
+//   bottom: 0;
+//   margin: auto;
+//   position: absolute;
+//   right: 100px;
+//   top: 0;
+// }
+
+// .previous_btn, .next_btn {
+//   cursor: pointer;
+//   height: 65px;
+//   opacity: 0.5;
+//   -webkit-transition: opacity 0.4s ease-in-out;
+//   -moz-transition: opacity 0.4s ease-in-out;
+//   -ms-transition: opacity 0.4s ease-in-out;
+//   -o-transition: opacity 0.4s ease-in-out;
+//   transition: opacity 0.4s ease-in-out;
+//   width: 65px;
+// }
+
+// .previous_btn:hover, .next_btn:hover {
+//   opacity: 1;
+// }
+
+// @media only screen and (max-width: 767px) {
+//   .previous_btn {
+//     left: 50px;
+//   }
+//   .next_btn {
+//     right: 50px;
+//   }
+// }
+
+
+
+
 
 // .aboutProMemPoints{
 //   font-size: 1.2em;
@@ -121,4 +117,53 @@
 //   }
 // }
 
+// Place all the styles related to the abouts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.image {
+  content: url("https://s3.amazonaws.com/deana-website/about-img.jpg");
+  width: 370px;
+}
+
+.right-col {
+  border-left: 1px solid rgba(38, 74, 38, 0.2);
+}
+
+#about-professional-membership-paragraph {
+  margin-left: -25px;
+}
+
+.side-image-content {
+  h1 {
+    margin-bottom: 0.9em;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+    margin-bottom: 3em;
+  }
+}
+
+@media screen and (max-width: 991px){
+  #about-main-title{
+    margin-top: 20px;
+  }
+  .image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .right-col {
+    border-left: none;
+  }
+}
+
+@media screen and (max-width: 471px){
+  .image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
 
