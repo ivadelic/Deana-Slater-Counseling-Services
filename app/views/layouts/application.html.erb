@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+<!--   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107194180-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107194180-2');
+  </script> -->
+  <!-- End of Google Analytics  -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Deana Slater Website" content="Deana Slater: Toronto Therapist providing Grief, Trauma, and Bereavement Counselling">
+  <meta name="Equinox Website" content="">
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
   <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Cinzel|PT+Serif+Caption' rel='stylesheet' type='text/css'>
-
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
   <%= csrf_meta_tags %>
 
-  <title>Deana Slater</title>
-  <%# csrf_meta_tags %>
+  <!-- SEO -->
+  <title>Deana Slater | Grief and Bereavement Counselling Services | Toronto Grief Therapist | Toronto, Ontario, Canada | (416)738-2812</title>
+
+  <meta name="description" content="Deana Slater is a counseller and therapist specializing in grief and bereavement in Toronto, Ontario, Canada">
+
+  <meta name="keywords" content="grief counselling, bereavement counselling, toronto therapy, toronto therapists, grief and bereavement">
+
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -29,15 +45,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <h1><a class="navbar-brand" href="/">Deana Slater</a></h1>
+        <a href="/homes">deana slater counselling services</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/"><span>Home</span></a></li>
-          <li><a href="/abouts"><span>About</span></a></li>
+          <li><a href="/abouts"><span>About Deana</span></a></li>
           <li><a href="/resources"><span>Resources</span></a></li>
+<<<<<<< HEAD
           <li><a href="/faqs"><span>FAQs</span></a></li>
           <li><a href="/contacts"><span>Contact</span></a>
             <% if current_admin %>
@@ -69,3 +86,37 @@
   </body>
 
   </html>
+=======
+          <li><a href="/faqs"><span>FAQs/span></a></li>
+            <li><a href="/contacts"><span>Contact</span></a>
+              <% if current_admin %>
+              <li><a href="/log_out" class="log_out">Log Out</a></li>
+              <% end %>
+
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <% if notice %>
+      <div class="alert alert-success"><%= notice %></div>
+      <% end %>
+      <% if alert %>
+      <div class="alert alert-danger"><%= alert %></div>
+      <% end %>
+      <div class="container">
+        <%= yield %>
+      </div>
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+
+
+      <%= javascript_include_tag 'application' %>
+      <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?key=#{Figaro.env.google_maps_api}" %>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    </body>
+
+    </html>
+>>>>>>> 5c3eb1cf00b18c1fdb6085b0f22cb3e2eabce9d2

@@ -1,5 +1,6 @@
 <main>
   <%= form_for @about do |f| %>
+<<<<<<< HEAD
   <<<<<<< HEAD
   <%# @about.errors.full_messages.first if @about.errors.any? %>
   <div class="abouts-form">
@@ -16,12 +17,63 @@
       <%= f.text_field :approach_title %>
       <h3>Professional Memberships</h3>
       <div class="field">
+=======
+    <%# @about.errors.full_messages.first if @about.errors.any? %>
+    <div class="abouts-form">
+      <div class="field">
+        <%= f.label :main_title %><br/>
+        <%= f.text_field :main_title %>
+      </div>
+      <div class="field">
+        <%= f.label :main_paragraph %><br/>
+        <%= f.text_area :main_paragraph %>
+      </div>
+      <!-- <div class="field">
+        <%= f.label :approach_title %><br/>
+        <%= f.text_field :approach_title %>
+      </div>
+      <div class= "field">
+        <%= f.label :approach_paragraph %><br/>
+        <%= f.text_area :approach_paragraph %>
+      </div>
+      <div class="field">
+        <%= f.label :education_title %><br/>
+        <%= f.text_field :education_title%>
+      </div>
+      <div class="field">
+        <%= f.label :education_paragraph %><br/>
+        <%= f.text_area :education_paragraph %>
+      </div> -->
+<!--       <div class="field">
+        <%# f.label :professional_membership_title %><br/>
+        <%# f.text_field :professional_membership_title %>
+      </div> -->
+      <!-- <h3>Professional Memberships</h3>
+        <div class="field">
+>>>>>>> 5c3eb1cf00b18c1fdb6085b0f22cb3e2eabce9d2
         <%=f.label :professional_membership_point1, "Professional Membership Point 1" %>
         <%=f.text_area :professional_membership_point1 %>
         <%=f.label :professional_membership_point2, "Professional Membership Point 2" %>
         <%=f.text_area :professional_membership_point2 %>
         <%=f.label :professional_membership_point3, "Professional Membership Point 3" %>
         <%=f.text_area :professional_membership_point3 %>
+<<<<<<< HEAD
+=======
+        </div> -->
+        <%# f.fields_for :propoints do |propoints_form| %><br/>
+          <%# render "propoint_fields", f: propoints_form %>
+        </div>
+        <div class="about-links">
+          <%# link_to_add_association "Add A Professional Membership", f, :propoints %>
+        </div>
+        <%# end %>
+        <div class="submit-button">
+          <%= f.submit %>
+        </div>
+        <br>
+        <br>
+        <br>
+>>>>>>> 5c3eb1cf00b18c1fdb6085b0f22cb3e2eabce9d2
       </div>
       <%# f.fields_for :propoints do |propoints_form| %><br/>
       <%# render "propoint_fields", f: propoints_form %>

@@ -2,68 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// General
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 100px;
+}
+
+p {
+    white-space: pre-line;
+}
+
 
 body.bg-img-div {
-    background: url("https://s3.amazonaws.com/deana-website/bg-img.jpg") no-repeat center center;
-    background-position: center center;
-
+    background: url("https://s3.amazonaws.com/deana-website/bg-img.jpg
+") no-repeat center center;
     height: 100vh;
+    width: 100%;
     background-size: cover;
     position: relative;
     // @include linear-gradient(transparentize();
 }
 
-.overlay {
-    font-size: 2.2em;
-    background: #BBB;
-    color: white;
-    display: inline-block;
-    font-weight: 900;
-    margin-bottom: 1.3em;
-    padding: $base-padding;
-    z-index: -2;
-
-
-    top: 45%;
-    position: fixed;
-    text-align: center;
-    display: block;
-    margin: auto;
-    left: 0;
-    right: 0;
-
-    // left: center;
+p {
+    white-space: pre-line;
 }
 
-//Enter Button
 
-.enter{
-    font-size: 1.9em;
-    color: #909090 ;
-    background: white;
-    text-align: center;
-    padding: $base-padding;
-    text-decoration: none;
-    // border: 2px solid;
-    border-radius: 10%;
-    font-weight: 900;
-
-    &:hover {
-        text-decoration: none;
-    }
-}
-
-.enter_container{
-    position: fixed;
-    margin: auto;
-    position: fixed;
-    text-align: center;
-    display: block;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 70%;
-}
 
 
 
