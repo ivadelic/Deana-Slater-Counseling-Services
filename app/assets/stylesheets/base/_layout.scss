@@ -26,6 +26,36 @@ main {
 
 }
 
+li {
+  list-style: none;
+}
+
+.heading-bg {
+  background-color: #adadad;
+  padding: 2rem;
+  position: fixed;
+  width: 100%;
+  margin-left: -15px;
+  top: 35%;
+  text-align: center;
+  h1 {
+    font-size: 2.4em;
+  }
+  p {
+    padding: 10px;
+    color: white;
+  }
+}
+
+.logo {
+  width: 90px;
+}
+
+.overlay {
+  color: white;
+  padding-top: 10px;
+}
+
 //Grey background headings
 
 .heading_with_background {
