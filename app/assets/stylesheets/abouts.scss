@@ -121,9 +121,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.navbar-brand {
+  margin: 1em;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #ddd0;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #ddd0;
+}
+
 .image {
   content: url("https://s3.amazonaws.com/deana-website/about-img.jpg");
-  width: 370px;
+  min-width: 240px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .right-col {
@@ -167,3 +181,9 @@
   }
 }
 
+@media screen and (min-width: 992px) {
+  .image {
+    float: right;
+    width: 100%;
+  }
+}
