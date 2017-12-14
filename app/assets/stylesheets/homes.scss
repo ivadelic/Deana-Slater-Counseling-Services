@@ -32,34 +32,13 @@ p {
     background-color: #156f7c;
 }
 
-.navbar-default .navbar-toggle {
-    border-color: #156f7c;
-}
-
-.navbar>.container-fluid .navbar-brand {
-    margin-left: 0px;
-}
-
-@media (max-width: 807px) {
-    .navbar-brand {
-        width: 148px;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: $M) {
-    .navbar > .container-fluid .navbar-brand {
-        margin-left: 10px;
-    }
-}
-
 nav {
     span {
         color: #fafafa;
     }
     span:hover{
-     color: #909090;
- }
+       color: #909090;
+   }
 }
 
 .background-container {
@@ -202,6 +181,7 @@ p {
     text-align: center;
 }
 }
+
 
 
 
