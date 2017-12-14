@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -27,6 +27,8 @@ gem "favorite_things"
 gem "cocoon"
 # gem 'simple_form'
 gem "figaro"
+
+gem "sitemap_generator"
 
 gem 'quiet_assets'
 gem "bourbon"

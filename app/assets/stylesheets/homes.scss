@@ -16,10 +16,10 @@ p {
     white-space: pre-line;
 }
 
-.bg-img-div {
-    background: url("https://s3-us-west-2.amazonaws.com/equinox-website/background_image.jpg") no-repeat center center;
-    background-position: center center;
 
+body.bg-img-div {
+    background: url("https://s3.amazonaws.com/deana-website/bg-img.jpg
+") no-repeat center center;
     height: 100vh;
     width: 100%;
     background-size: cover;
@@ -27,22 +27,8 @@ p {
     // @include linear-gradient(transparentize();
 }
 
-.navbar-default {
-    border-color: #156f7c;
-    background-color: #156f7c;
-}
-
-nav {
-    span {
-        color: #fafafa;
-    }
-    span:hover{
-       color: #909090;
-   }
-}
-
-.background-container {
-    height: 740px;
+p {
+    white-space: pre-line;
 }
 
 .overlay {
