@@ -5,16 +5,11 @@
       <h1 class="heading_with_background">About Our Therapists</h1>
     </div>
 
-    <%= @faqs.each do |faq| %>
+    <% @faqs.each do |faq| %>
 
     <div id="faq_nested_routes">
-      <div class="side-image">
-        <div class="images-wrapper"></div>
-        <div class="side-image-content">
-          <h1><%= faq.question %></h1>
-          <p><%= faq.answer %></p>
-        </div>
-      </div>
+      <h1><%= faq.question %></h1>
+      <p><%= faq.answer %></p>
     </div>
   </div>
 
@@ -29,8 +24,6 @@
     <% if current_admin %>
     <button><%= link_to "Add New FAQ", new_faq_path(@faq)%></button>
     <% end %>
-    <br>
-    <br>
-    <br>
   </div>
 </main>
+
