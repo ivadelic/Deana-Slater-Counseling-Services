@@ -31,7 +31,8 @@ li {
 }
 
 .heading-bg {
-  background-color: #adadad;
+  //background-color: #c6c6c6;
+  background-color: #628354;
   padding: 2rem;
   position: fixed;
   width: 100%;
@@ -40,10 +41,17 @@ li {
   text-align: center;
   h1 {
     font-size: 2.4em;
+    margin-bottom: 0px;
   }
   p {
     padding: 10px;
-    color: white;
+    color: #9ab785;
+  }
+}
+
+.enter_container {
+  a {
+    color: #292b29;
   }
 }
 
