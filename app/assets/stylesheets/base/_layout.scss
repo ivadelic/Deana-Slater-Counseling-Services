@@ -30,6 +30,12 @@ li {
   list-style: none;
 }
 
+a:hover {
+  text-decoration: none;
+  color: black;
+  transition: color 0.1s linear;
+}
+
 .heading-bg {
   //background-color: #c6c6c6;
   background-color: #9f9f9fe3;
@@ -38,7 +44,7 @@ li {
   // margin-left: -15px;
   // top: 35%;
   // text-align: center;
-  margin-top: 200px;
+  margin-top: 100px;
   max-width: 600px;
   .overlay {
     font-size: 3.4em;
@@ -48,14 +54,17 @@ li {
   }
   p {
     padding: 10px 0px 10px 0px;
-    color: #d4d4d4;
+    // color: #d4d4d4;
+    color: #5f5f5f;
   }
 }
 
 .enter_container {
+  text-align: center;
+  border-bottom: 0.1em #ffffff solid;
   a {
     font-size: 2.4rem;
-    color: #e5e5e5;
+    color: #ffffff;
   }
 }
 

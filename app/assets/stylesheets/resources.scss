@@ -2,11 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.heading_with_background {
+  text-transform: uppercase;
+}
 #resource-main-paragraph{
-  text-align: center;
-  margin-left: 15%;
-  margin-right: 15%;
-  font-weight: bold;
+  text-align: left;
+  padding: 30px;
+  // margin-left: 15%;
+  // margin-right: 15%;
+  font-size: 1.1em;
+  font-style: italic;
 }
 
 ul {

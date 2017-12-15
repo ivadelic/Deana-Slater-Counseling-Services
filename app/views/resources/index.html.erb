@@ -16,42 +16,47 @@
         <h4><%= resource.telephone_title %></h4>
       </div>
 
-      <div id="resource_telephone_points">
-        <ul>
-          <% resource.telpoints.each do |telpoint| %>
+      <ul>
+        <% resource.telpoints.each do |telpoint| %>
+        <div id="resource_telephone_points">
           <li><%= telpoint.telephone_company %></li>
           <a href= "tel:<%= telpoint.telephone_number %>"><%= telpoint.telephone_number %></a>
-          <% end %>
-        </ul>
-      </div>
+        </div>
+        <% end %>
+      </ul>
+
 
       <!-- Website -->
       <div id="resource-website-title">
         <h4><%= resource.website_title %></h4>
       </div>
 
-      <div id="resource_website_points">
-        <ul>
-          <% resource.webpoints.each do |webpoint| %>
-          <li><%= webpoint.website_company %><br/></li>
+
+      <ul>
+        <% resource.webpoints.each do |webpoint| %>
+        <li><%= webpoint.website_company %><br/></li>
+        <div id="resource_website_points">
           <a href= "<%= webpoint.website_link %>" target="_blank"><%= webpoint.website_link %></a>
-          <% end %>
-        </ul>
-      </div>
+        </div>
+        <% end %>
+      </ul>
+
 
       <!-- Article -->
       <div id="resource-article-title">
         <h4><%= resource.article_title %></h4>
       </div>
 
-      <div id="resource_website_points">
-        <ul>
-          <% resource.articlepoints.each do |articlepoint| %>
+      <ul>
+        <% resource.articlepoints.each do |articlepoint| %>
+
+        <div id="resource_website_points">
           <li><%= articlepoint.article_name %></li>
           <a href= "<%= articlepoint.article_link %>" target="_blank"><%= articlepoint.article_link %></a>
-          <% end %>
-        </ul>
-      </div>
+        </div>
+        <% end %>
+      </ul>
+
 
     </div>
 

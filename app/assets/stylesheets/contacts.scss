@@ -13,24 +13,21 @@
 
 }
 
-
-//Icons
-.google_pin{
-  height: 32px;
-  margin-left: 13px;
+.contact-description {
+ color: gray;
 }
 
-.phone_icons{
-  height: $phone-icon-size;
-  width: $phone-icon-size;
+.contact-point {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  a {
+    font-size: 1.2em;
+  }
 }
 
-.mail_icons{
-  height: $mail-icon-size;
-  width: $mail-icon-size;
+.contact-points {
+  text-align: center;
 }
-
-
 
 @media screen and (max-width: 470px){
   .image-td {
