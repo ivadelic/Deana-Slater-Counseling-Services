@@ -30,9 +30,11 @@
       </div>
       <div id="about-professional-membership-paragraph">
         <ul>
-          <% about.propoints.each do |propoint| %>
-          <li type="circle"><%= propoint.point %></li>
-          <% end %>
+          <%# about.propoints.each do |propoint| %>
+          <li type="circle"><%= about.professional_membership_point1 %></li>
+           <li type="circle"><%= about.professional_membership_point2 %></li>
+            <li type="circle"><%= about.professional_membership_point3 %></li>
+          <%# end %>
         </ul>
       </div>
     </div>
