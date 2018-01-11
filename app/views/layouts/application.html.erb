@@ -8,6 +8,10 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
   <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Cinzel|PT+Serif+Caption' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -51,7 +55,6 @@
 
           </ul>
         </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
     </nav>
 
     <% if notice %>
@@ -60,7 +63,6 @@
     <% if alert %>
     <div class="alert alert-danger"><%= alert %></div>
     <% end %>
-    <div class="container-fluid">
       <%= yield %>
     </div>
 

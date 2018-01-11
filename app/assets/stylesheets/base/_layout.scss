@@ -40,14 +40,15 @@ a:hover {
 
 .heading-bg {
   //background-color: #c6c6c6;
-  background-color: rgba(159, 159, 159, 0.8901960784313725);
+  // background-color: rgba(159, 159, 159, 0.8901960784313725);
   padding: 2rem;
   // position: fixed;
   // margin-left: -15px;
   // top: 35%;
   // text-align: center;
   margin-top: 150px;
-  max-width: 600px;
+  max-width: 100%;
+  text-align: center;
   .overlay {
     font-size: 2.6em;
     padding-bottom: 0px;
@@ -57,7 +58,8 @@ a:hover {
   p {
     padding: 10px 0px 10px 0px;
     // color: #d4d4d4;
-    color: #5f5f5f;
+    color: white;
+    font-style: italic;
   }
 }
 
@@ -103,6 +105,7 @@ a:hover {
   border-color: $super-light-gray;
   background-color: $super-light-gray;
   font-size: 1.1em;
+  margin-bottom: 0px;
 }
 
 .navbar-brand {
